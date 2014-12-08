@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "658fd5826f179329a3c7673ff7ddb61b",
+    "hash": "fcb06497eafd95b20557060708917129",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -158,53 +158,17 @@
             "time": "2014-12-03 15:38:13"
         },
         {
-            "name": "lightopenid/lightopenid",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/soundasleep/lightopenid.git",
-                "reference": "45e59630025cff221392c3ed32cd979f3b278aae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/lightopenid/zipball/45e59630025cff221392c3ed32cd979f3b278aae",
-                "reference": "45e59630025cff221392c3ed32cd979f3b278aae",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.3"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "./"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "homepage": "http://code.google.com/p/lightopenid/",
-            "keywords": [
-                "openid"
-            ],
-            "support": {
-                "source": "https://github.com/soundasleep/lightopenid/tree/master",
-                "issues": "https://github.com/soundasleep/lightopenid/issues"
-            },
-            "time": "2014-04-18 02:16:03"
-        },
-        {
             "name": "openclerk/config",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/config.git",
-                "reference": "429c458eee40c19716349b26c047149295d200e2"
+                "reference": "c86c7dc7567efbf406fd9ceb4252c80560e60bec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/config/zipball/429c458eee40c19716349b26c047149295d200e2",
-                "reference": "429c458eee40c19716349b26c047149295d200e2",
+                "url": "https://api.github.com/repos/openclerk/config/zipball/c86c7dc7567efbf406fd9ceb4252c80560e60bec",
+                "reference": "c86c7dc7567efbf406fd9ceb4252c80560e60bec",
                 "shasum": ""
             },
             "type": "library",
@@ -217,7 +181,7 @@
                 "source": "https://github.com/openclerk/config/tree/master",
                 "issues": "https://github.com/openclerk/config/issues"
             },
-            "time": "2014-12-05 02:35:15"
+            "time": "2014-12-08 02:13:51"
         },
         {
             "name": "openclerk/db",
@@ -225,12 +189,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "3b0a85b2cdc4115ea230af8f5e77c5ced70e4fbf"
+                "reference": "bed01065da9dbe7f34c8be15d14f2a6c7697a3e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/3b0a85b2cdc4115ea230af8f5e77c5ced70e4fbf",
-                "reference": "3b0a85b2cdc4115ea230af8f5e77c5ced70e4fbf",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/bed01065da9dbe7f34c8be15d14f2a6c7697a3e1",
+                "reference": "bed01065da9dbe7f34c8be15d14f2a6c7697a3e1",
                 "shasum": ""
             },
             "type": "library",
@@ -243,7 +207,7 @@
                 "source": "https://github.com/openclerk/db/tree/master",
                 "issues": "https://github.com/openclerk/db/issues"
             },
-            "time": "2014-12-05 02:36:15"
+            "time": "2014-12-08 02:13:36"
         },
         {
             "name": "openclerk/jobs",
@@ -280,19 +244,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/users.git",
-                "reference": "95986caf340ea4072d2ddaf124aa00f65cc066dc"
+                "reference": "42b5be7793f2a16c7e2326550ec7e975a2b05208"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/users/zipball/95986caf340ea4072d2ddaf124aa00f65cc066dc",
-                "reference": "95986caf340ea4072d2ddaf124aa00f65cc066dc",
+                "url": "https://api.github.com/repos/openclerk/users/zipball/42b5be7793f2a16c7e2326550ec7e975a2b05208",
+                "reference": "42b5be7793f2a16c7e2326550ec7e975a2b05208",
                 "shasum": ""
             },
             "require": {
                 "league/oauth2-client": "~0.6",
-                "lightopenid/lightopenid": "dev-master",
                 "openclerk/config": "dev-master",
                 "openclerk/db": "dev-master",
+                "soundasleep/lightopenid": "~0.1",
                 "soundasleep/php-helpers": "dev-master"
             },
             "type": "library",
@@ -305,7 +269,7 @@
                 "source": "https://github.com/openclerk/users/tree/master",
                 "issues": "https://github.com/openclerk/users/issues"
             },
-            "time": "2014-12-05 11:11:05"
+            "time": "2014-12-08 03:10:15"
         },
         {
             "name": "soundasleep/component-discovery",
@@ -313,12 +277,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/component-discovery.git",
-                "reference": "3cef97db1a8e11956cd9a6080f539f3e4742363d"
+                "reference": "b3e4cbae7de8a38fa973e0f18d125ee87bc1c29b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/component-discovery/zipball/3cef97db1a8e11956cd9a6080f539f3e4742363d",
-                "reference": "3cef97db1a8e11956cd9a6080f539f3e4742363d",
+                "url": "https://api.github.com/repos/soundasleep/component-discovery/zipball/b3e4cbae7de8a38fa973e0f18d125ee87bc1c29b",
+                "reference": "b3e4cbae7de8a38fa973e0f18d125ee87bc1c29b",
                 "shasum": ""
             },
             "type": "library",
@@ -331,7 +295,41 @@
                 "source": "https://github.com/soundasleep/component-discovery/tree/master",
                 "issues": "https://github.com/soundasleep/component-discovery/issues"
             },
-            "time": "2014-12-04 23:54:05"
+            "time": "2014-12-08 02:55:38"
+        },
+        {
+            "name": "soundasleep/lightopenid",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soundasleep/lightopenid.git",
+                "reference": "ad2860b94c4410b331317095b15020664ba126c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soundasleep/lightopenid/zipball/ad2860b94c4410b331317095b15020664ba126c2",
+                "reference": "ad2860b94c4410b331317095b15020664ba126c2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A PHP 5 library for easy openid authentication.",
+            "homepage": "http://code.google.com/p/lightopenid/",
+            "keywords": [
+                "OpenId"
+            ],
+            "time": "2014-12-08 02:57:33"
         },
         {
             "name": "soundasleep/php-helpers",
@@ -339,12 +337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/php-helpers.git",
-                "reference": "3119898422c2714e43460bc088a60ddea0711fde"
+                "reference": "b4ca857d82eac9c70e6016d2d6f3371a797d9433"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/php-helpers/zipball/3119898422c2714e43460bc088a60ddea0711fde",
-                "reference": "3119898422c2714e43460bc088a60ddea0711fde",
+                "url": "https://api.github.com/repos/soundasleep/php-helpers/zipball/b4ca857d82eac9c70e6016d2d6f3371a797d9433",
+                "reference": "b4ca857d82eac9c70e6016d2d6f3371a797d9433",
                 "shasum": ""
             },
             "type": "library",
@@ -357,7 +355,7 @@
                 "source": "https://github.com/soundasleep/php-helpers/tree/master",
                 "issues": "https://github.com/soundasleep/php-helpers/issues"
             },
-            "time": "2014-12-05 02:40:49"
+            "time": "2014-12-08 02:27:48"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -427,8 +425,7 @@
         "openclerk/users": 20,
         "openclerk/db": 20,
         "openclerk/jobs": 20,
-        "soundasleep/php-helpers": 20,
-        "lightopenid/lightopenid": 20
+        "soundasleep/php-helpers": 20
     },
     "prefer-stable": false,
     "platform": [],
