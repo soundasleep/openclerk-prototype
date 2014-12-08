@@ -1,0 +1,16 @@
+{
+  "name": "openclerk/openclerk2",
+  "autoload": {
+    "psr-4": {
+      "Core\\": "core",
+      "DiscoveredComponents\\": "generated/components"
+    }
+  },
+  "require": {
+    "soundasleep/component-discovery": "dev-master"
+  },
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/soundasleep/component-discovery"
+  }]
+}

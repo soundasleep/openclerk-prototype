@@ -1,0 +1,45 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "d80f3c1d0972d07ddf226c53d06026a1",
+    "packages": [
+        {
+            "name": "soundasleep/component-discovery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soundasleep/component-discovery.git",
+                "reference": "3cef97db1a8e11956cd9a6080f539f3e4742363d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soundasleep/component-discovery/zipball/3cef97db1a8e11956cd9a6080f539f3e4742363d",
+                "reference": "3cef97db1a8e11956cd9a6080f539f3e4742363d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ComponentDiscovery\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/soundasleep/component-discovery/tree/master",
+                "issues": "https://github.com/soundasleep/component-discovery/issues"
+            },
+            "time": "2014-12-04 23:54:05"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "soundasleep/component-discovery": 20
+    },
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}

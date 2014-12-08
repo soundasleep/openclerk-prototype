@@ -1,0 +1,8 @@
+{
+  "components": {
+    "currencies": "currencies.json",
+    "jobs": "jobs.json"
+  },
+  "src": ["vendor/*/*", "core"],
+  "dest": "generated/components"
+}
