@@ -1,7 +1,8 @@
 {
   "components": {
     "currencies": "currencies.json",
-    "jobs": "jobs.json"
+    "jobs": "jobs.json",
+    "migrations": "migrations.json"
   },
   "src": ["vendor/*/*", "core"],
   "dest": "generated/components"

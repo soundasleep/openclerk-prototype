@@ -7,10 +7,34 @@
     }
   },
   "require": {
-    "soundasleep/component-discovery": "dev-master"
+    "soundasleep/component-discovery": "dev-master",
+    "openclerk/config": "dev-master",
+    "openclerk/users": "dev-master",
+    "openclerk/db": "dev-master",
+    "openclerk/jobs": "dev-master",
+    "soundasleep/php-helpers": "dev-master",
+    "lightopenid/lightopenid": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
     "url": "https://github.com/soundasleep/component-discovery"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/config"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/users"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/db"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/jobs"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/soundasleep/php-helpers"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/soundasleep/lightopenid"
   }]
 }

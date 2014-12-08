@@ -1,4 +1,4 @@
 {
-  "\\Core\\Bitcoin": "\\Core\\Bitcoin",
-  "\\Core\\Litecoin": "\\Core\\Litecoin"
+  "btc": "\\Core\\Bitcoin",
+  "ltc": "\\Core\\Litecoin"
 }
