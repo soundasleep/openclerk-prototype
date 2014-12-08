@@ -9,7 +9,7 @@ Openclerk\Config::merge(array(
 
   "user_password_salt" => "abc123",
   "autologin_expire_days" => 30,
-  "openid_host" => "localhost"
+  "openid_host" => "localhost",
 ));
 
 if (file_Exists(__DIR__ . "/private.php")) {

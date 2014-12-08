@@ -61,6 +61,8 @@ if ($user) {
 
 <a href="login.php">Login with password</a>
 <a href="login-openid.php">Login with OpenID</a>
+<a href="login-oauth2.php">Login with OAuth2</a>
 <a href="register.php">Register with password</a>
 <a href="register-openid.php">Register with OpenID</a>
+<a href="register-oauth2.php">Register with OAuth2</a>
 <a href="logout.php">Logout</a>
