@@ -1,0 +1,8 @@
+Test email sent {$now}
+Hi {$email},
+
+This is a test email sent {$now}. (A random number is {$random}.)
+
+Thanks,
+{$site_name}
+{$site_url}

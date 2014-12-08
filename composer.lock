@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fcb06497eafd95b20557060708917129",
+    "hash": "f856967dd30f81e1d498e7c505e3680e",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -210,6 +210,38 @@
             "time": "2014-12-08 02:13:36"
         },
         {
+            "name": "openclerk/emails",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/emails.git",
+                "reference": "142f88e6df979471cfd1d926c85424ced4f4e6da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/emails/zipball/142f88e6df979471cfd1d926c85424ced4f4e6da",
+                "reference": "142f88e6df979471cfd1d926c85424ced4f4e6da",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/config": "dev-master",
+                "openclerk/db": "dev-master",
+                "openclerk/templates": "dev-master",
+                "phpmailer/phpmailer": ">=5.2.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Emails\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/emails/tree/master",
+                "issues": "https://github.com/openclerk/emails/issues"
+            },
+            "time": "2014-12-08 03:54:24"
+        },
+        {
             "name": "openclerk/jobs",
             "version": "dev-master",
             "source": {
@@ -239,17 +271,43 @@
             "time": "2014-12-05 02:38:15"
         },
         {
+            "name": "openclerk/templates",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/templates.git",
+                "reference": "ff527b88bae3229a7cbb0561484fcb3da1968087"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/templates/zipball/ff527b88bae3229a7cbb0561484fcb3da1968087",
+                "reference": "ff527b88bae3229a7cbb0561484fcb3da1968087",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/templates/tree/master",
+                "issues": "https://github.com/openclerk/templates/issues"
+            },
+            "time": "2014-12-08 03:48:54"
+        },
+        {
             "name": "openclerk/users",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/users.git",
-                "reference": "42b5be7793f2a16c7e2326550ec7e975a2b05208"
+                "reference": "10de650072024c170c17275338cdb929accffec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/users/zipball/42b5be7793f2a16c7e2326550ec7e975a2b05208",
-                "reference": "42b5be7793f2a16c7e2326550ec7e975a2b05208",
+                "url": "https://api.github.com/repos/openclerk/users/zipball/10de650072024c170c17275338cdb929accffec1",
+                "reference": "10de650072024c170c17275338cdb929accffec1",
                 "shasum": ""
             },
             "require": {
@@ -269,7 +327,60 @@
                 "source": "https://github.com/openclerk/users/tree/master",
                 "issues": "https://github.com/openclerk/users/issues"
             },
-            "time": "2014-12-08 03:10:15"
+            "time": "2014-12-08 03:11:30"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v5.2.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "73b61679809615850706f1dbf88e6df2ddc05745"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/73b61679809615850706f1dbf88e6df2ddc05745",
+                "reference": "73b61679809615850706f1dbf88e6df2ddc05745",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "*",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.pop3.php",
+                    "class.smtp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2014-09-26 18:33:30"
         },
         {
             "name": "soundasleep/component-discovery",
@@ -425,7 +536,9 @@
         "openclerk/users": 20,
         "openclerk/db": 20,
         "openclerk/jobs": 20,
-        "soundasleep/php-helpers": 20
+        "soundasleep/php-helpers": 20,
+        "openclerk/templates": 20,
+        "openclerk/emails": 20
     },
     "prefer-stable": false,
     "platform": [],

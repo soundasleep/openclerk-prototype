@@ -12,7 +12,9 @@
     "openclerk/users": "dev-master",
     "openclerk/db": "dev-master",
     "openclerk/jobs": "dev-master",
-    "soundasleep/php-helpers": "dev-master"
+    "soundasleep/php-helpers": "dev-master",
+    "openclerk/templates": "dev-master",
+    "openclerk/emails": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -29,6 +31,12 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/jobs"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/templates"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/emails"
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"

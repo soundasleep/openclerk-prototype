@@ -34,6 +34,10 @@ class AllMigrations extends \Db\Migration {
   function getParents() {
     return array(new Db\BaseMigration()) + DiscoveredComponents\Migrations::getAllInstances();
   }
+
+  function getName() {
+    return "AllMigrations_" . md5(implode(",", array_keys($this->getParents())));
+  }
 }
 
 $migrations = new AllMigrations(db());
@@ -66,3 +70,36 @@ if ($user) {
 <a href="register-openid.php">Register with OpenID</a>
 <a href="register-oauth2.php">Register with OAuth2</a>
 <a href="logout.php">Logout</a>
+
+<h2>Emails</h2>
+
+<a href="email.php">Send test email</a>
+
+<?php
+
+// What's done?
+// - component management
+// - config
+// - database
+// - users
+// - jobs
+
+// What's next?
+// - templating
+// - sending emails
+// - html emails
+// - users without emails
+// - forgotten passwords
+// - multiple OpenIDs/OAuths per user
+// - accounts
+// - graphs
+// - technical indicators
+// - reports
+// - components can provide assets
+// - tests
+// - build
+// - coffeescript, sass
+// - i18n
+// - transactions
+// - metrics
+

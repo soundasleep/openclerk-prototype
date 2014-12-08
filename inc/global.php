@@ -3,6 +3,8 @@
 require(__DIR__ . "/../vendor/autoload.php");
 
 Openclerk\Config::merge(array(
+  "site_name" => "Openclerk2 Test",
+
   "database_name" => "clerk2",
   "database_username" => "clerk2",
   "database_password" => "clerk2",
@@ -26,6 +28,14 @@ function db() {
     config("database_username"),
     config("database_password")
   );
+}
+
+function send_email($to, $template_id, $args = array()) {
+  $args['site_name'] = config('site_name');
+  // TODO site_url
+  $args['site_email'] = config('phpmailer_from');
+
+  Emails\Email::send(db(), $to, $template_id, $args);
 }
 
 session_start();
