@@ -43,3 +43,24 @@ if ($migrations->hasPending(db())) {
   $migrations->install(db(), $logger);
   echo "</ul>";
 }
+
+?>
+
+<h2>Users</h2>
+
+<?php
+print_r($_SESSION);
+
+$user = Users\User::getInstance(db());
+if ($user) {
+  echo "Logged in as $user";
+} else {
+  echo "Not logged in";
+}
+?>
+
+<a href="login.php">Login with password</a>
+<a href="login-openid.php">Login with OpenID</a>
+<a href="register.php">Register with password</a>
+<a href="register-openid.php">Register with OpenID</a>
+<a href="logout.php">Logout</a>
