@@ -85,12 +85,18 @@ if ($user) {
 // - jobs
 
 // What's next?
-// - templating
 // - sending emails
 // - html emails
+// - exception handling
 // - users without emails
+// - extended user properties
+// - form validations
+// - user roles
+// - admin interface for exceptions
+// - heavy requests (OpenID)
 // - forgotten passwords
 // - multiple OpenIDs/OAuths per user
+// - addresses
 // - accounts
 // - graphs
 // - technical indicators
@@ -99,7 +105,9 @@ if ($user) {
 // - tests
 // - build
 // - coffeescript, sass
-// - i18n
+// - i18n, UI
+// - API wrappers for jobs/accounts
+// - components can define UIs (maybe through DiscoveredComponents\UserInterfaces which are wrapped in templates?)
 // - transactions
 // - metrics
 

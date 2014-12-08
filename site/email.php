@@ -3,6 +3,9 @@
 require(__DIR__ . "/../inc/global.php");
 
 $user = Users\User::findUser(db(), 1);
+if (!$user) {
+  throw new Exception("Could not find any user 1");
+}
 // or an email address
 
 $result = send_email($user, "test", array(

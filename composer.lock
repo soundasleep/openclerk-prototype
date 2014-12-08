@@ -215,19 +215,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/emails.git",
-                "reference": "142f88e6df979471cfd1d926c85424ced4f4e6da"
+                "reference": "2f347540332e0aa34f7b49d3c116c5faa88d220e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/emails/zipball/142f88e6df979471cfd1d926c85424ced4f4e6da",
-                "reference": "142f88e6df979471cfd1d926c85424ced4f4e6da",
+                "url": "https://api.github.com/repos/openclerk/emails/zipball/2f347540332e0aa34f7b49d3c116c5faa88d220e",
+                "reference": "2f347540332e0aa34f7b49d3c116c5faa88d220e",
                 "shasum": ""
             },
             "require": {
                 "openclerk/config": "dev-master",
                 "openclerk/db": "dev-master",
                 "openclerk/templates": "dev-master",
-                "phpmailer/phpmailer": ">=5.2.9"
+                "phpmailer/phpmailer": ">=5.2.9",
+                "soundasleep/html2text": ">=0.2.0"
             },
             "type": "library",
             "autoload": {
@@ -239,7 +240,7 @@
                 "source": "https://github.com/openclerk/emails/tree/master",
                 "issues": "https://github.com/openclerk/emails/issues"
             },
-            "time": "2014-12-08 03:54:24"
+            "time": "2014-12-08 08:24:17"
         },
         {
             "name": "openclerk/jobs",
@@ -407,6 +408,50 @@
                 "issues": "https://github.com/soundasleep/component-discovery/issues"
             },
             "time": "2014-12-08 02:55:38"
+        },
+        {
+            "name": "soundasleep/html2text",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soundasleep/html2text.git",
+                "reference": "156c633ddc0c3a8af99e29b6e070c3de285339f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soundasleep/html2text/zipball/156c633ddc0c3a8af99e29b6e070c3de285339f7",
+                "reference": "156c633ddc0c3a8af99e29b6e070c3de285339f7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Html2Text\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "EPL-1.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jevon Wright",
+                    "homepage": "https://jevon.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP script to convert HTML into a plain text format",
+            "homepage": "https://github.com/soundasleep/html2text",
+            "keywords": [
+                "email",
+                "html",
+                "php",
+                "text"
+            ],
+            "time": "2014-12-08 08:29:18"
         },
         {
             "name": "soundasleep/lightopenid",
