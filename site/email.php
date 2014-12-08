@@ -11,11 +11,13 @@ if (!$user) {
 $result = send_email($user, "test", array(
   "random" => rand(0,0x9999),
   "now" => date('r'),
+  "site_url" => "http://localhost/",
 ));
 
 send_email("soundasleep@gmail.com", "test", array(
   "random" => rand(0,0x9999),
   "now" => date('r'),
+  "site_url" => "http://localhost/",
 ));
 
 echo "Sent an email $result to $user";
