@@ -14,8 +14,7 @@
     "openclerk/jobs": "dev-master",
     "soundasleep/php-helpers": "dev-master",
     "openclerk/templates": "dev-master",
-    "openclerk/emails": "dev-master",
-    "pelago/emogrifier": "dev-master"
+    "openclerk/emails": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -41,8 +40,5 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/jjriv/emogrifier"
   }]
 }

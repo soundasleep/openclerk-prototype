@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7e133b10674c88357ddb82170a433882",
+    "hash": "f856967dd30f81e1d498e7c505e3680e",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -215,19 +215,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/emails.git",
-                "reference": "58ed1e1c1a2423c59920a6e5eb0fa95feb478316"
+                "reference": "7c7ba48cf92318abbd32aa8a64bfeff3370d948a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/emails/zipball/58ed1e1c1a2423c59920a6e5eb0fa95feb478316",
-                "reference": "58ed1e1c1a2423c59920a6e5eb0fa95feb478316",
+                "url": "https://api.github.com/repos/openclerk/emails/zipball/7c7ba48cf92318abbd32aa8a64bfeff3370d948a",
+                "reference": "7c7ba48cf92318abbd32aa8a64bfeff3370d948a",
                 "shasum": ""
             },
             "require": {
                 "openclerk/config": "dev-master",
                 "openclerk/db": "dev-master",
                 "openclerk/templates": "dev-master",
-                "pelago/emogrifier": "dev-master",
+                "pelago/emogrifier": ">=0.1",
                 "phpmailer/phpmailer": ">=5.2.9",
                 "soundasleep/html2text": ">=0.2.0"
             },
@@ -241,7 +241,7 @@
                 "source": "https://github.com/openclerk/emails/tree/master",
                 "issues": "https://github.com/openclerk/emails/issues"
             },
-            "time": "2014-12-08 09:08:56"
+            "time": "2014-12-08 21:08:32"
         },
         {
             "name": "openclerk/jobs",
@@ -333,7 +333,7 @@
         },
         {
             "name": "pelago/emogrifier",
-            "version": "dev-master",
+            "version": "v0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jjriv/emogrifier.git",
@@ -360,6 +360,7 @@
                     "Pelago\\": "Classes/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -385,10 +386,6 @@
             ],
             "description": "Converts CSS styles into inline style attributes in your HTML code",
             "homepage": "http://www.pelagodesign.com/sidecar/emogrifier/",
-            "support": {
-                "source": "https://github.com/jjriv/emogrifier/tree/master",
-                "issues": "https://github.com/jjriv/emogrifier/issues"
-            },
             "time": "2014-10-30 16:45:48"
         },
         {
@@ -644,8 +641,7 @@
         "openclerk/jobs": 20,
         "soundasleep/php-helpers": 20,
         "openclerk/templates": 20,
-        "openclerk/emails": 20,
-        "pelago/emogrifier": 20
+        "openclerk/emails": 20
     },
     "prefer-stable": false,
     "platform": [],
