@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f856967dd30f81e1d498e7c505e3680e",
+    "hash": "42684882950c3038c6aea9db9c209363",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -215,21 +215,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/emails.git",
-                "reference": "7c7ba48cf92318abbd32aa8a64bfeff3370d948a"
+                "reference": "1832635c1e5ffbd32755e4a31647b4b70ac82d07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/emails/zipball/7c7ba48cf92318abbd32aa8a64bfeff3370d948a",
-                "reference": "7c7ba48cf92318abbd32aa8a64bfeff3370d948a",
+                "url": "https://api.github.com/repos/openclerk/emails/zipball/1832635c1e5ffbd32755e4a31647b4b70ac82d07",
+                "reference": "1832635c1e5ffbd32755e4a31647b4b70ac82d07",
                 "shasum": ""
             },
             "require": {
                 "openclerk/config": "dev-master",
-                "openclerk/db": "dev-master",
+                "openclerk/events": "dev-master",
                 "openclerk/templates": "dev-master",
                 "pelago/emogrifier": ">=0.1",
                 "phpmailer/phpmailer": ">=5.2.9",
-                "soundasleep/html2text": ">=0.2.0"
+                "soundasleep/html2text": ">=0.2.1"
             },
             "type": "library",
             "autoload": {
@@ -241,7 +241,33 @@
                 "source": "https://github.com/openclerk/emails/tree/master",
                 "issues": "https://github.com/openclerk/emails/issues"
             },
-            "time": "2014-12-08 21:08:32"
+            "time": "2014-12-10 03:03:31"
+        },
+        {
+            "name": "openclerk/events",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/events.git",
+                "reference": "fcb0fa6968e0181a94b1a29e2df0186519658b50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/events/zipball/fcb0fa6968e0181a94b1a29e2df0186519658b50",
+                "reference": "fcb0fa6968e0181a94b1a29e2df0186519658b50",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/events/tree/master",
+                "issues": "https://github.com/openclerk/events/issues"
+            },
+            "time": "2014-12-10 02:51:49"
         },
         {
             "name": "openclerk/jobs",
@@ -469,16 +495,16 @@
         },
         {
             "name": "soundasleep/html2text",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/html2text.git",
-                "reference": "156c633ddc0c3a8af99e29b6e070c3de285339f7"
+                "reference": "9197a3b4ed28e441ec479e15c22879ceaff32fee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/html2text/zipball/156c633ddc0c3a8af99e29b6e070c3de285339f7",
-                "reference": "156c633ddc0c3a8af99e29b6e070c3de285339f7",
+                "url": "https://api.github.com/repos/soundasleep/html2text/zipball/9197a3b4ed28e441ec479e15c22879ceaff32fee",
+                "reference": "9197a3b4ed28e441ec479e15c22879ceaff32fee",
                 "shasum": ""
             },
             "require": {
@@ -487,7 +513,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Html2Text\\": "."
+                    "Html2Text\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -509,7 +535,7 @@
                 "php",
                 "text"
             ],
-            "time": "2014-12-08 08:29:18"
+            "time": "2014-12-10 03:06:54"
         },
         {
             "name": "soundasleep/lightopenid",
@@ -641,7 +667,8 @@
         "openclerk/jobs": 20,
         "soundasleep/php-helpers": 20,
         "openclerk/templates": 20,
-        "openclerk/emails": 20
+        "openclerk/emails": 20,
+        "openclerk/events": 20
     },
     "prefer-stable": false,
     "platform": [],

@@ -83,10 +83,10 @@ if ($user) {
 // - database
 // - users
 // - jobs
-
-// What's next?
 // - sending emails
 // - html emails
+
+// What's next?
 // - exception handling
 // - users without emails
 // - extended user properties

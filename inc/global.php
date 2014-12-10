@@ -35,7 +35,26 @@ function send_email($to, $template_id, $args = array()) {
   // TODO site_url
   $args['site_email'] = config('phpmailer_from');
 
-  Emails\Email::send(db(), $to, $template_id, $args);
+  Emails\Email::send($to, $template_id, $args);
 }
+
+Openclerk\Events::on('email_sent', function($email) {
+  // insert in database keys
+  $q = db()->prepare("INSERT INTO emails SET
+    user_id=:user_id,
+    to_name=:to_name,
+    to_email=:to_email,
+    subject=:subject,
+    template_id=:template_id,
+    arguments=:arguments");
+  $q->execute(array(
+    "user_id" => $email['user_id'],
+    "to_name" => $email['to_name'],
+    "to_email" => $email['to_email'],
+    "subject" => $email['subject'],
+    "template_id" => $email['template_id'],
+    "arguments" => serialize($email['arguments']),
+  ));
+});
 
 session_start();
