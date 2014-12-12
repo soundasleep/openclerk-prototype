@@ -86,3 +86,21 @@ function link_to($url, $text = false) {
   "security/register/:key" => "security/register-:key.php",
   "security/add/:key" => "security/add-:key.php",
 ));
+
+function page_header($title, $id = "", $arguments = array()) {
+  $arguments['title'] = $title;
+  $arguments['id'] = $id;
+  \Pages\PageRenderer::header($arguments);
+}
+
+function page_footer($arguments = array()) {
+  \Pages\PageRenderer::footer($arguments);
+}
+
+function require_template($template_id, $arguments = array()) {
+  \Pages\PageRenderer::requireTemplate($template_id, $arguments);
+}
+
+\Pages\PageRenderer::addTemplatesLocation(__DIR__ . "/../templates");
+\Pages\PageRenderer::addStylesheet(\Openclerk\Router::urlFor("css/default.css"));
+\Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("js/default.js"));

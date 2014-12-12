@@ -2,6 +2,8 @@
 
 require(__DIR__ . "/../inc/global.php");
 
+page_header(config('site_name'), "page_index");
+
 ?>
 <h1>Openclerk2</h1>
 
@@ -108,6 +110,8 @@ foreach ($exceptions as $e) {
 
 <?php
 
+page_footer();
+
 // What's done?
 // - component management
 // - config
@@ -118,9 +122,9 @@ foreach ($exceptions as $e) {
 // - html emails
 // - exception handling
 // - users without emails
+// - URLs and routing and relative paths
 
 // What's next?
-// - URLs and routing and relative paths
 // - page templates
 // - tests for components
 // - extended user properties
