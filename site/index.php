@@ -75,6 +75,26 @@ if ($user) {
 
 <a href="email.php">Send test email</a>
 
+<h2>Exceptions</h2>
+
+<a href="exceptions-throw.php">Throw exception</a>
+<a href="exceptions-compile.php">Compile error</a>
+<a href="exceptions-fatal.php">Fatal error</a>
+<a href="exceptions-typed.php">Typed exception</a>
+
+<ul>
+<?php
+
+$q = db()->prepare("SELECT * FROM uncaught_exceptions ORDER BY id desc LIMIT 5");
+$q->execute();
+$exceptions = $q->fetchAll();
+foreach ($exceptions as $e) {
+  echo "<li> <b>$e[id]</b> $e[message] ($e[class_name]) - $e[filename]:$e[line_number] ($e[argument_type] $e[argument_id])</li>\n";
+}
+
+?>
+</ul>
+
 <?php
 
 // What's done?
@@ -85,9 +105,10 @@ if ($user) {
 // - jobs
 // - sending emails
 // - html emails
+// - exception handling
 
 // What's next?
-// - exception handling
+// - tests for components
 // - users without emails
 // - extended user properties
 // - form validations
@@ -106,6 +127,7 @@ if ($user) {
 // - build
 // - coffeescript, sass
 // - i18n, UI
+// - content types, exception handling for content types
 // - API wrappers for jobs/accounts
 // - components can define UIs (maybe through DiscoveredComponents\UserInterfaces which are wrapped in templates?)
 // - transactions

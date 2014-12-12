@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42684882950c3038c6aea9db9c209363",
+    "hash": "976532f7c907d13805d6282aa5d0f732",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -189,12 +189,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "bed01065da9dbe7f34c8be15d14f2a6c7697a3e1"
+                "reference": "52c2247dc2d0692df50ddacc07da5b2df34cb3a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/bed01065da9dbe7f34c8be15d14f2a6c7697a3e1",
-                "reference": "bed01065da9dbe7f34c8be15d14f2a6c7697a3e1",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/52c2247dc2d0692df50ddacc07da5b2df34cb3a1",
+                "reference": "52c2247dc2d0692df50ddacc07da5b2df34cb3a1",
                 "shasum": ""
             },
             "type": "library",
@@ -207,7 +207,7 @@
                 "source": "https://github.com/openclerk/db/tree/master",
                 "issues": "https://github.com/openclerk/db/issues"
             },
-            "time": "2014-12-08 02:13:36"
+            "time": "2014-12-12 07:50:22"
         },
         {
             "name": "openclerk/emails",
@@ -215,12 +215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/emails.git",
-                "reference": "1832635c1e5ffbd32755e4a31647b4b70ac82d07"
+                "reference": "7be73dfedf304321c2cb9ff311bd078a70e3ef53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/emails/zipball/1832635c1e5ffbd32755e4a31647b4b70ac82d07",
-                "reference": "1832635c1e5ffbd32755e4a31647b4b70ac82d07",
+                "url": "https://api.github.com/repos/openclerk/emails/zipball/7be73dfedf304321c2cb9ff311bd078a70e3ef53",
+                "reference": "7be73dfedf304321c2cb9ff311bd078a70e3ef53",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
                 "source": "https://github.com/openclerk/emails/tree/master",
                 "issues": "https://github.com/openclerk/emails/issues"
             },
-            "time": "2014-12-10 03:03:31"
+            "time": "2014-12-10 03:09:48"
         },
         {
             "name": "openclerk/events",
@@ -268,6 +268,40 @@
                 "issues": "https://github.com/openclerk/events/issues"
             },
             "time": "2014-12-10 02:51:49"
+        },
+        {
+            "name": "openclerk/exceptions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/exceptions.git",
+                "reference": "d6ef608f24aea0453eb3099cb5e4fec32909e8a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/exceptions/zipball/d6ef608f24aea0453eb3099cb5e4fec32909e8a7",
+                "reference": "d6ef608f24aea0453eb3099cb5e4fec32909e8a7",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/config": "dev-master",
+                "openclerk/db": "dev-master",
+                "openclerk/events": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/exceptions/tree/master",
+                "issues": "https://github.com/openclerk/exceptions/issues"
+            },
+            "time": "2014-12-12 08:12:48"
         },
         {
             "name": "openclerk/jobs",
@@ -668,7 +702,8 @@
         "soundasleep/php-helpers": 20,
         "openclerk/templates": 20,
         "openclerk/emails": 20,
-        "openclerk/events": 20
+        "openclerk/events": 20,
+        "openclerk/exceptions": 20
     },
     "prefer-stable": false,
     "platform": [],
