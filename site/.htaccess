@@ -8,4 +8,7 @@ RewriteEngine on
 RewriteBase /openclerk2
 ErrorDocument 404 /openclerk2/404.php
 
-RewriteRule ^([^\.]+)$        router.php?path=$1         [L,QSA]
+# Forbid access to any child PHP scripts
+RewriteRule ^([^\.]+)/([^\.]+).php$   -                   [F]
+
+RewriteRule ^([^\.]+)$                router.php?path=$1  [L,QSA]
