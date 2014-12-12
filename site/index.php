@@ -70,6 +70,7 @@ if ($user) {
 <a href="register-openid.php">Register with OpenID</a>
 <a href="register-oauth2.php">Register with OAuth2</a>
 <a href="logout.php">Logout</a>
+<a href="password.php">Forgot password</a>
 
 <h2>Emails</h2>
 
@@ -108,6 +109,7 @@ foreach ($exceptions as $e) {
 // - exception handling
 
 // What's next?
+// - URLs and routing
 // - tests for components
 // - users without emails
 // - extended user properties

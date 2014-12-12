@@ -5,10 +5,13 @@ require(__DIR__ . "/../vendor/autoload.php");
 Openclerk\Config::merge(array(
   "site_name" => "Openclerk2 Test",
 
+  "display_errors" => true,
+
   "database_name" => "clerk2",
   "database_username" => "clerk2",
   "database_password" => "clerk2",
 
+  "user_password_reset_expiry" => "3 days",
   "user_password_salt" => "abc123",
   "autologin_expire_days" => 30,
   "openid_host" => "localhost",
