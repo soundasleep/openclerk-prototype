@@ -69,7 +69,11 @@ if ($user) {
 <a href="register.php">Register with password</a>
 <a href="register-openid.php">Register with OpenID</a>
 <a href="register-oauth2.php">Register with OAuth2</a>
+<a href="add-password.php">Add password</a>
+<a href="add-openid.php">Add OpenID identity</a>
+<a href="add-oauth2.php">Add OAuth2 identity</a>
 <a href="logout.php">Logout</a>
+<a href="delete-user.php">Delete user</a>
 <a href="password.php">Forgot password</a>
 
 <h2>Emails</h2>

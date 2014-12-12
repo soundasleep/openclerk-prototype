@@ -60,4 +60,12 @@ Openclerk\Events::on('email_sent', function($email) {
   ));
 });
 
+Openclerk\Events::on('user_deleted', function($user) {
+  // send email
+  send_email($user, "user_deleted", array(
+    "id" => $user->getId(),
+    "email" => $user->getEmail(),
+  ));
+});
+
 session_start();
