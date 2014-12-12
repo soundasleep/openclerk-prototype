@@ -80,9 +80,9 @@ function link_to($url, $text = false) {
 
 // set up routes
 \Openclerk\Router::addRoutes(array(
-  "security/login/password" => "login.php",
-  "security/login/:key" => "login-:key.php",
-  "security/register/password" => "register.php",
-  "security/register/:key" => "register-:key.php",
-  "security/add/:key" => "add-:key.php",
+  "security/login/password" => "security/login.php",
+  "security/login/:key" => "security/login-:key.php",
+  "security/register/password" => "security/register.php",
+  "security/register/:key" => "security/register-:key.php",
+  "security/add/:key" => "security/add-:key.php",
 ));
