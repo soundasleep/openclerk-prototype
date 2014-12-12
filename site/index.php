@@ -63,18 +63,20 @@ if ($user) {
 }
 ?>
 
-<a href="login.php">Login with password</a>
-<a href="login-openid.php">Login with OpenID</a>
-<a href="login-oauth2.php">Login with OAuth2</a>
-<a href="register.php">Register with password</a>
-<a href="register-openid.php">Register with OpenID</a>
-<a href="register-oauth2.php">Register with OAuth2</a>
-<a href="add-password.php">Add password</a>
-<a href="add-openid.php">Add OpenID identity</a>
-<a href="add-oauth2.php">Add OAuth2 identity</a>
-<a href="logout.php">Logout</a>
-<a href="delete-user.php">Delete user</a>
-<a href="password.php">Forgot password</a>
+<ul>
+<li><?php echo link_to(url_for('security/login/password'), "Login with password"); ?></li>
+<li><?php echo link_to(url_for('security/login/openid'), "Login with OpenID"); ?></li>
+<li><?php echo link_to(url_for('security/login/oauth2'), "Login with OAuth2"); ?></li>
+<li><?php echo link_to(url_for('security/register/password'), "Register with password"); ?></li>
+<li><?php echo link_to(url_for('security/register/openid'), "Register with OpenID"); ?></li>
+<li><?php echo link_to(url_for('security/register/oauth2'), "Register with OAuth2"); ?></li>
+<li><?php echo link_to(url_for('security/add/password'), "Add password"); ?></li>
+<li><?php echo link_to(url_for('security/add/openid'), "Add OpenID identity"); ?></li>
+<li><?php echo link_to(url_for('security/add/oauth2'), "Add OAuth2 identity"); ?></li>
+<li><?php echo link_to(url_for('security/logout'), "Logout"); ?></li>
+<li><a href="delete-user.php">Delete user</a></li>
+<li><a href="password.php">Forgot password</a></li>
+</ul>
 
 <h2>Emails</h2>
 
@@ -100,6 +102,10 @@ foreach ($exceptions as $e) {
 ?>
 </ul>
 
+<h2>Routing</h2>
+
+<a href="router.php">Test router</a>
+
 <?php
 
 // What's done?
@@ -111,11 +117,12 @@ foreach ($exceptions as $e) {
 // - sending emails
 // - html emails
 // - exception handling
+// - users without emails
 
 // What's next?
-// - URLs and routing
+// - URLs and routing and relative paths
+// - page templates
 // - tests for components
-// - users without emails
 // - extended user properties
 // - form validations
 // - user roles

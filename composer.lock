@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "976532f7c907d13805d6282aa5d0f732",
+    "hash": "1c6777601559db4b40eb4fb70f35595c",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -189,12 +189,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "52c2247dc2d0692df50ddacc07da5b2df34cb3a1"
+                "reference": "54c2ecfe995b41891b8b235e53be284712e131f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/52c2247dc2d0692df50ddacc07da5b2df34cb3a1",
-                "reference": "52c2247dc2d0692df50ddacc07da5b2df34cb3a1",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/54c2ecfe995b41891b8b235e53be284712e131f0",
+                "reference": "54c2ecfe995b41891b8b235e53be284712e131f0",
                 "shasum": ""
             },
             "type": "library",
@@ -207,7 +207,7 @@
                 "source": "https://github.com/openclerk/db/tree/master",
                 "issues": "https://github.com/openclerk/db/issues"
             },
-            "time": "2014-12-12 07:50:22"
+            "time": "2014-12-12 09:34:18"
         },
         {
             "name": "openclerk/emails",
@@ -275,12 +275,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/exceptions.git",
-                "reference": "d6ef608f24aea0453eb3099cb5e4fec32909e8a7"
+                "reference": "d02369b1965b20b039f2a91db6f932c0857634dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/exceptions/zipball/d6ef608f24aea0453eb3099cb5e4fec32909e8a7",
-                "reference": "d6ef608f24aea0453eb3099cb5e4fec32909e8a7",
+                "url": "https://api.github.com/repos/openclerk/exceptions/zipball/d02369b1965b20b039f2a91db6f932c0857634dd",
+                "reference": "d02369b1965b20b039f2a91db6f932c0857634dd",
                 "shasum": ""
             },
             "require": {
@@ -301,7 +301,7 @@
                 "source": "https://github.com/openclerk/exceptions/tree/master",
                 "issues": "https://github.com/openclerk/exceptions/issues"
             },
-            "time": "2014-12-12 08:12:48"
+            "time": "2014-12-12 10:26:29"
         },
         {
             "name": "openclerk/jobs",
@@ -331,6 +331,38 @@
                 "issues": "https://github.com/openclerk/jobs/issues"
             },
             "time": "2014-12-05 02:38:15"
+        },
+        {
+            "name": "openclerk/routing",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/routing.git",
+                "reference": "1090690e9f3768a7ddd0d73a06cbdf3bf907ab07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/routing/zipball/1090690e9f3768a7ddd0d73a06cbdf3bf907ab07",
+                "reference": "1090690e9f3768a7ddd0d73a06cbdf3bf907ab07",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/config": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/routing/tree/master",
+                "issues": "https://github.com/openclerk/routing/issues"
+            },
+            "time": "2014-12-12 10:37:21"
         },
         {
             "name": "openclerk/templates",
@@ -364,18 +396,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/users.git",
-                "reference": "10de650072024c170c17275338cdb929accffec1"
+                "reference": "eaf94fcb624e17cb22759ff4c1bebda3afd9bb58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/users/zipball/10de650072024c170c17275338cdb929accffec1",
-                "reference": "10de650072024c170c17275338cdb929accffec1",
+                "url": "https://api.github.com/repos/openclerk/users/zipball/eaf94fcb624e17cb22759ff4c1bebda3afd9bb58",
+                "reference": "eaf94fcb624e17cb22759ff4c1bebda3afd9bb58",
                 "shasum": ""
             },
             "require": {
                 "league/oauth2-client": "~0.6",
                 "openclerk/config": "dev-master",
                 "openclerk/db": "dev-master",
+                "openclerk/events": "dev-master",
                 "soundasleep/lightopenid": "~0.1",
                 "soundasleep/php-helpers": "dev-master"
             },
@@ -389,7 +422,7 @@
                 "source": "https://github.com/openclerk/users/tree/master",
                 "issues": "https://github.com/openclerk/users/issues"
             },
-            "time": "2014-12-08 03:11:30"
+            "time": "2014-12-12 10:24:17"
         },
         {
             "name": "pelago/emogrifier",
@@ -611,12 +644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/php-helpers.git",
-                "reference": "b4ca857d82eac9c70e6016d2d6f3371a797d9433"
+                "reference": "1d3b37df24036933402d4b7e78455d5f13118665"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/php-helpers/zipball/b4ca857d82eac9c70e6016d2d6f3371a797d9433",
-                "reference": "b4ca857d82eac9c70e6016d2d6f3371a797d9433",
+                "url": "https://api.github.com/repos/soundasleep/php-helpers/zipball/1d3b37df24036933402d4b7e78455d5f13118665",
+                "reference": "1d3b37df24036933402d4b7e78455d5f13118665",
                 "shasum": ""
             },
             "type": "library",
@@ -629,7 +662,7 @@
                 "source": "https://github.com/soundasleep/php-helpers/tree/master",
                 "issues": "https://github.com/soundasleep/php-helpers/issues"
             },
-            "time": "2014-12-08 02:27:48"
+            "time": "2014-12-12 09:09:36"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -703,7 +736,8 @@
         "openclerk/templates": 20,
         "openclerk/emails": 20,
         "openclerk/events": 20,
-        "openclerk/exceptions": 20
+        "openclerk/exceptions": 20,
+        "openclerk/routing": 20
     },
     "prefer-stable": false,
     "platform": [],

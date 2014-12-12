@@ -16,7 +16,8 @@
     "openclerk/templates": "dev-master",
     "openclerk/emails": "dev-master",
     "openclerk/events": "dev-master",
-    "openclerk/exceptions": "dev-master"
+    "openclerk/exceptions": "dev-master",
+    "openclerk/routing": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -45,6 +46,9 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/exceptions"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/routing"
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"

@@ -4,6 +4,7 @@ require(__DIR__ . "/../vendor/autoload.php");
 
 Openclerk\Config::merge(array(
   "site_name" => "Openclerk2 Test",
+  "absolute_url" => "http://localhost/openclerk2/",
 
   "display_errors" => true,
 
@@ -69,3 +70,19 @@ Openclerk\Events::on('user_deleted', function($user) {
 });
 
 session_start();
+
+function link_to($url, $text = false) {
+  if ($text === false) {
+    return link_to($url, $url);
+  }
+  return "<a href=\"" . htmlspecialchars($url) . "\">" . htmlspecialchars($text) . "</a>";
+}
+
+// set up routes
+\Openclerk\Router::addRoutes(array(
+  "security/login/password" => "login.php",
+  "security/login/:key" => "login-:key.php",
+  "security/register/password" => "register.php",
+  "security/register/:key" => "register-:key.php",
+  "security/add/:key" => "add-:key.php",
+));
