@@ -1,3 +1,6 @@
 generated
 vendor
 inc/private.php
+site/generated
+.sass-cache
+node_modules/

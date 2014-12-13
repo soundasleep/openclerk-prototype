@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "59ddd080c831d70ab1c7ddccc77e5579",
+    "hash": "e13250935c07f03eced45db607a0bdce",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -338,12 +338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/pages.git",
-                "reference": "e0ea604d22910b76ed9544d909c4d33110f490c8"
+                "reference": "296f39028f24b9925f25654ee1725fc80f982ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/pages/zipball/e0ea604d22910b76ed9544d909c4d33110f490c8",
-                "reference": "e0ea604d22910b76ed9544d909c4d33110f490c8",
+                "url": "https://api.github.com/repos/openclerk/pages/zipball/296f39028f24b9925f25654ee1725fc80f982ef5",
+                "reference": "296f39028f24b9925f25654ee1725fc80f982ef5",
                 "shasum": ""
             },
             "type": "library",
@@ -356,7 +356,7 @@
                 "source": "https://github.com/openclerk/pages/tree/master",
                 "issues": "https://github.com/openclerk/pages/issues"
             },
-            "time": "2014-12-12 22:57:48"
+            "time": "2014-12-12 23:47:58"
         },
         {
             "name": "openclerk/routing",
@@ -564,6 +564,27 @@
             "time": "2014-09-26 18:33:30"
         },
         {
+            "name": "soundasleep/asset-discovery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soundasleep/asset-discovery.git",
+                "reference": "aaa5fc64a87fd29da89ac2f7111bff88cdb676d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soundasleep/asset-discovery/zipball/aaa5fc64a87fd29da89ac2f7111bff88cdb676d6",
+                "reference": "aaa5fc64a87fd29da89ac2f7111bff88cdb676d6",
+                "shasum": ""
+            },
+            "type": "library",
+            "support": {
+                "source": "https://github.com/soundasleep/asset-discovery/tree/master",
+                "issues": "https://github.com/soundasleep/asset-discovery/issues"
+            },
+            "time": "2014-12-13 00:39:02"
+        },
+        {
             "name": "soundasleep/component-discovery",
             "version": "dev-master",
             "source": {
@@ -757,6 +778,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "soundasleep/component-discovery": 20,
+        "soundasleep/asset-discovery": 20,
         "openclerk/config": 20,
         "openclerk/users": 20,
         "openclerk/db": 20,

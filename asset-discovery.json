@@ -1,0 +1,8 @@
+{
+  "src": ["vendor/*/*", "core"],
+  "js": "site/generated/js/generated.js",
+  "coffee": "site/generated/js/generated-coffee.coffee",
+  "css": "site/generated/css/generated.css",
+  "scss": "site/generated/css/generated-scss.scss",
+  "images": "site/generated/images/"
+}

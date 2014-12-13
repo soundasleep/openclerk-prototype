@@ -11,7 +11,7 @@ page_header(config('site_name'), "page_index");
 
 <ul>
   <?php foreach (DiscoveredComponents\Currencies::getAllInstances() as $key => $cur) {
-    echo "<li>[" . $key . "] " . $cur->getName() . " (" . get_class($cur) . ")</li>\n";
+    echo "<li><span class=\"currency currency_" . $key . "\">[" . $key . "] " . $cur->getName() . " (" . get_class($cur) . ")</span></li>\n";
   } ?>
 </ul>
 
@@ -123,10 +123,10 @@ page_footer();
 // - exception handling
 // - users without emails
 // - URLs and routing and relative paths
-
-// What's next?
 // - page templates
 // - tests for components
+
+// What's next?
 // - extended user properties
 // - form validations
 // - user roles

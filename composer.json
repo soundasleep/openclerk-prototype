@@ -8,6 +8,7 @@
   },
   "require": {
     "soundasleep/component-discovery": "dev-master",
+    "soundasleep/asset-discovery": "dev-master",
     "openclerk/config": "dev-master",
     "openclerk/users": "dev-master",
     "openclerk/db": "dev-master",
@@ -23,6 +24,9 @@
   "repositories": [{
     "type": "vcs",
     "url": "https://github.com/soundasleep/component-discovery"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/soundasleep/asset-discovery"
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/config"

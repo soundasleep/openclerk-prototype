@@ -1,0 +1,16 @@
+/* currencies */
+
+.currency {
+  display: inline-block;
+  min-height: 16px;
+  min-width: 16px;
+  padding-left: (16px + 4px);
+
+  &.currency_btc {
+    background: url('../images/bitcoin.png') top left no-repeat;
+  }
+
+  &.currency_ltc {
+    background: url('../images/litecoin.png') top left no-repeat;
+  }
+}

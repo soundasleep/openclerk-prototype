@@ -1,0 +1,11 @@
+{
+  "scss": [
+    "css/currencies.scss"
+  ],
+  "coffee": [
+    "js/currencies.coffee"
+  ],
+  "images": [
+    "images/"
+  ]
+}

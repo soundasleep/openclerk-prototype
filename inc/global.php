@@ -103,5 +103,9 @@ function require_template($template_id, $arguments = array()) {
 
 \Pages\PageRenderer::addTemplatesLocation(__DIR__ . "/../templates");
 \Pages\PageRenderer::addStylesheet(\Openclerk\Router::urlFor("css/default.css"));
+\Pages\PageRenderer::addStylesheet(\Openclerk\Router::urlFor("generated/css/generated-scss.css"));
+\Pages\PageRenderer::addStylesheet(\Openclerk\Router::urlFor("generated/css/generated.css"));
 \Pages\PageRenderer::addJavascript("https://code.jquery.com/jquery-2.1.1.min.js");
 \Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("js/default.js"));
+\Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("generated/js/generated-coffee.js"));
+\Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("generated/js/generated.js"));
