@@ -108,6 +108,11 @@ foreach ($exceptions as $e) {
 
 <a href="router.php">Test router</a>
 
+<h2>Jobs</h2>
+
+<a href="queue.php">Queue jobs</a>
+<a href="run.php">Run a job</a>
+
 <h2>Addresses</h2>
 
 <li><a href="add-address.php">Add address to current user</a></li>

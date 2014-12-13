@@ -2,7 +2,7 @@
 
 namespace Core;
 
-class Bitcoin implements Currency, ExplorableCurrency {
+class Bitcoin implements Currency, ExplorableCurrency, BalanceableAddress {
   function getName() {
     return "Bitcoin";
   }
@@ -17,6 +17,22 @@ class Bitcoin implements Currency, ExplorableCurrency {
 
   function getExplorerName() {
     return "blockchain.info";
+  }
+
+  function fetchBalance($address, \Db\Logger $logger) {
+    $url = "https://blockchain.info/q/addressbalance/" . urlencode($address) . "?confirmations=" . \Openclerk\Config::get('btc_confirmations', 0);
+
+    // TODO blockchain API key
+
+    $logger->log("Fetching $url");
+    $response = \Core\Fetch::get($url);
+
+    // TODO is_numeric check
+
+    $balance = $response;
+    $divisor = 1e8;   // divide by 1e8 to get btc balance
+
+    return $balance / $divisor;
   }
 
 }

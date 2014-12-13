@@ -16,6 +16,10 @@ Openclerk\Config::merge(array(
   "user_password_salt" => "abc123",
   "autologin_expire_days" => 30,
   "openid_host" => "localhost",
+
+  // in minutes
+  "job_address_interval" => 0,
+  "get_contents_timeout" => 10, // in seconds, default 300s
 ));
 
 if (file_Exists(__DIR__ . "/private.php")) {
