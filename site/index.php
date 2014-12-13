@@ -125,6 +125,8 @@ page_footer();
 // - URLs and routing and relative paths
 // - page templates
 // - tests for components
+// - components can provide assets
+// - build
 
 // What's next?
 // - extended user properties
@@ -139,14 +141,13 @@ page_footer();
 // - graphs
 // - technical indicators
 // - reports
-// - components can provide assets
 // - tests
-// - build
-// - coffeescript, sass
 // - i18n, UI
 // - content types, exception handling for content types
 // - API wrappers for jobs/accounts
 // - components can define UIs (maybe through DiscoveredComponents\UserInterfaces which are wrapped in templates?)
 // - transactions
 // - metrics
+// - grunt NPM wrappers
+// - spritify with high res sprites
 

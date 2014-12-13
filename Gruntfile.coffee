@@ -36,16 +36,26 @@ module.exports = (grunt) ->
           ext: '.js'
         }]
 
+    spritify:
+      dist:
+        options: {
+          input: 'site/generated/css/generated-scss.css',
+          output: 'site/generated/css/generated-scss.css',
+          png: '../images/sprites.png'
+        }
+
   grunt.loadNpmTasks 'grunt-bg-shell'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.loadNpmTasks 'grunt-contrib-spritify'
 
   grunt.registerTask 'default', "Generate static sites and assets and discover components", [
     'clean',
     'bgShell:assetDiscovery',
     'bgShell:componentDiscovery',
     'sass',
-    'coffee'
+    'coffee',
+    'spritify'
   ]
 

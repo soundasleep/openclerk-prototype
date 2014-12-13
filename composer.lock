@@ -569,12 +569,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/asset-discovery.git",
-                "reference": "aaa5fc64a87fd29da89ac2f7111bff88cdb676d6"
+                "reference": "80ba7c24878ff00be4067d0bc06ceb820acf6f86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/asset-discovery/zipball/aaa5fc64a87fd29da89ac2f7111bff88cdb676d6",
-                "reference": "aaa5fc64a87fd29da89ac2f7111bff88cdb676d6",
+                "url": "https://api.github.com/repos/soundasleep/asset-discovery/zipball/80ba7c24878ff00be4067d0bc06ceb820acf6f86",
+                "reference": "80ba7c24878ff00be4067d0bc06ceb820acf6f86",
                 "shasum": ""
             },
             "type": "library",
@@ -582,7 +582,7 @@
                 "source": "https://github.com/soundasleep/asset-discovery/tree/master",
                 "issues": "https://github.com/soundasleep/asset-discovery/issues"
             },
-            "time": "2014-12-13 00:39:02"
+            "time": "2014-12-13 00:46:16"
         },
         {
             "name": "soundasleep/component-discovery",
