@@ -2,8 +2,13 @@
 
 namespace Core;
 
-class Litecoin {
+class Litecoin implements Currency {
   function getName() {
     return "Litecoin";
   }
+
+  function getCode() {
+    return "ltc";
+  }
+
 }

@@ -109,3 +109,17 @@ function require_template($template_id, $arguments = array()) {
 \Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("js/default.js"));
 \Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("generated/js/generated-coffee.js"));
 \Pages\PageRenderer::addJavascript(\Openclerk\Router::urlFor("generated/js/generated.js"));
+
+function user_id() {
+  $user = get_user();
+  return $user->getId();
+}
+
+function get_user() {
+  $user = Users\User::getInstance(db());
+  if (!$user) {
+    // TODO redirect etc
+    throw new Exception("User expected");
+  }
+  return $user;
+}

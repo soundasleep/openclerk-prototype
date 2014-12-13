@@ -108,6 +108,59 @@ foreach ($exceptions as $e) {
 
 <a href="router.php">Test router</a>
 
+<h2>Addresses</h2>
+
+<li><a href="add-address.php">Add address to current user</a></li>
+
+<ul>
+<?php
+
+function address_format($currency, $address) {
+  $instance = \DiscoveredComponents\Currencies::getInstance($currency);
+  $url = false;
+  if ($instance instanceof \Core\ExplorableCurrency) {
+    $url = $instance->getExplorerURL($address);
+  }
+
+  $s = "<code class=\"currency currency_$currency\">";
+  if ($url) {
+    $s .= "<a href=\"" . htmlspecialchars($url) . "\" title=\"Explore with " . htmlspecialchars($instance->getExplorerName()) . "\">";
+  }
+  $s .= htmlspecialchars($address);
+  if ($url) {
+    $s .= "</a>";
+  }
+  $s .= "</code>";
+  return $s;
+}
+
+function currency_format($currency, $amount) {
+  return number_format($amount, 3) . " " . get_currency_abbr($currency);
+}
+
+function get_currency_abbr($currency) {
+  return strtoupper($currency);
+}
+
+if ($user) {
+  $q = db()->prepare("SELECT * FROM addresses ORDER BY id desc LIMIT 5");
+  $q->execute(array($user->getId()));
+  $addresses = $q->fetchAll();
+  foreach ($addresses as $address) {
+    $q = db()->prepare("SELECT * FROM address_balances WHERE user_id=? AND address_id=? AND is_recent=1 LIMIT 1");
+    $q->execute(array($user->getId(), $address['id']));
+    $balance = $q->fetch();
+    echo "<li> <b>$address[id]</b> " . address_format($address['currency'], $address['address']);
+    if ($balance) {
+      echo " - " . currency_format($address['currency'], $balance['balance']);
+    }
+    echo "</li>\n";
+  }
+}
+
+?>
+</ul>
+
 <?php
 
 page_footer();
@@ -127,6 +180,7 @@ page_footer();
 // - tests for components
 // - components can provide assets
 // - build
+// - grunt wrapper for Spritify
 
 // What's next?
 // - extended user properties
@@ -148,6 +202,7 @@ page_footer();
 // - components can define UIs (maybe through DiscoveredComponents\UserInterfaces which are wrapped in templates?)
 // - transactions
 // - metrics
-// - grunt NPM wrappers
+// - grunt wrapper for component-discovery
+// - grunt wrapper for asset-discovery
 // - spritify with high res sprites
 

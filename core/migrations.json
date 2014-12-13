@@ -1,3 +1,5 @@
 {
-  "\\Core\\EmailsMigration": "\\Core\\EmailsMigration"
+  "\\Core\\EmailsMigration": "\\Core\\EmailsMigration",
+  "\\Core\\Migrations\\Addresses": "\\Core\\Migrations\\Addresses",
+  "\\Core\\Migrations\\AddressBalances": "\\Core\\Migrations\\AddressBalances"
 }
