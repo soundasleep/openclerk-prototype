@@ -159,7 +159,7 @@ class Form {
       $out .= "<div class=\"failure\">" . $this->lastFailure . "</div>\n";
     }
 
-    $out .= "<form method=\"post\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\">\n";
+    $out .= "<form method=\"post\" action=\"" . htmlspecialchars($_SERVER['REQUEST_URI']) . "\" id=\"form_" . $this->getFormName() . "\">\n";
     $out .= "<table class=\"form\">\n";
     // TODO XSS
     foreach ($this->fields as $key => $value) {
@@ -194,37 +194,95 @@ class Form {
     $out .= "</table>";
     $out .= "</form>";
 
+    // generate validator script
+    $out .= "<script type=\"text/javascript\">" . $this->generateValidateScript() . "</script>";
+
     $out .= "</div>";
 
     return $out;
+  }
+
+  function generateValidateScript() {
+
+    // TODO maybe replace this with templates?
+    // although this will generate a lot of filesystem load on page render
+
+    $out = "";
+    $out .= "$(document).ready(function() {\n";
+    $out .= "  var form = $(\"#form_" . $this->getFormName() . "\");\n";
+    $out .= "  form.submit(function() {\n";
+    $out .= "    var errors = {}; var temp = null;\n";
+    foreach ($this->fields as $key => $value) {
+      $out .= "  var " . $key . " = $(form)" . $this->getFieldValueScript($key, $value['type']) . "\n";
+      foreach ($value['validators'] as $validator) {
+        $out .= "  temp = " . $validator->validateScript($key) . ";\n";
+        $out .= "  if (temp !== null) {\n";
+        $out .= "    if (typeof errors[" . $key . "] == 'undefined') {\n";
+        $out .= "      errors[" . $key . "] = []\n";
+        $out .= "    }\n";
+        $out .= "    $(temp).each(function(i, message) { errors[" . $key . "].push(message); });\n";
+        $out .= "  }\n";
+      }
+
+      // we can't do anything yet with server-side validators in #validate()
+      $out .= "  alert(errors);\n";
+    }
+    $out .= "  });\n";
+    $out .= "});\n";
+
+    return $out;
+
   }
 
   function isKeyValueField($type) {
     return $type != 'submit';
   }
 
+  function getfieldId($s) {
+    return preg_replace("#[^a-z0-9_]#i", "_", $s);
+  }
+
   function renderField($key, $type, $value = null) {
     $fieldName = $this->getFormName() . "[" . $key . "]";
+    $id = $this->getFieldId($fieldName);
 
     switch ($type) {
       case "text":
-        return "<input type=\"text\" name=\"" . htmlspecialchars($fieldName) . "\" value=\"" . htmlspecialchars($value) . "\">";
+        return "<input type=\"text\" name=\"" . htmlspecialchars($fieldName) . "\" id=\"" . htmlspecialchars($id) . "\" value=\"" . htmlspecialchars($value) . "\">";
 
       case "email":
         // html5
-        return "<input type=\"email\" name=\"" . htmlspecialchars($fieldName) . "\" value=\"" . htmlspecialchars($value) . "\">";
+        return "<input type=\"email\" name=\"" . htmlspecialchars($fieldName) . "\" id=\"" . htmlspecialchars($id) . "\" value=\"" . htmlspecialchars($value) . "\">";
 
       case "password":
-        return "<input type=\"password\" name=\"" . htmlspecialchars($fieldName) . "\" value=\"\">";
+        return "<input type=\"password\" name=\"" . htmlspecialchars($fieldName) . "\" id=\"" . htmlspecialchars($id) . "\" value=\"\">";
 
       case "submit":
-        return "<input type=\"submit\" name=\"" . htmlspecialchars($fieldName) . "\" value=\"" . htmlspecialchars($this->fields[$key]['title']) . "\">";
+        return "<input type=\"submit\" name=\"" . htmlspecialchars($fieldName) . "\" id=\"" . htmlspecialchars($id) . "\" value=\"" . htmlspecialchars($this->fields[$key]['title']) . "\">";
 
       default:
         throw new FormRenderingException("Unknown field to render '$type'");
 
     }
   }
+
+  function getFieldValueScript($key, $type) {
+    $fieldName = $this->getFormName() . "[" . $key . "]";
+    $id = $this->getFieldId($fieldName);
+
+    switch ($type) {
+      case "text":
+      case "email":
+      case "password":
+      case "submit":
+        return ".find(\"input#$id\").val()";
+
+      default:
+        throw new FormRenderingException("Unknown field to render '$type'");
+
+    }
+  }
+
 }
 
 class Validateable {
@@ -294,6 +352,10 @@ class RequiredValidator implements Validator {
       return array($this->message);
     }
   }
+
+  function validateScript($key) {
+    return "(function() { return $key != null && $key.length > 0; })();";
+  }
 }
 
 class MaxLengthValidator implements Validator {
@@ -308,6 +370,10 @@ class MaxLengthValidator implements Validator {
     } else {
       return array($this->message);
     }
+  }
+
+  function validateScript($key) {
+    return "(function() { return $key != null && $key.length < " . $this->number . "; })();";
   }
 }
 
@@ -324,6 +390,10 @@ class MinLengthValidator implements Validator {
       return array($this->message);
     }
   }
+
+  function validateScript($key) {
+    return "(function() { return $key != null && $key.length > " . $this->number . "; })();";
+  }
 }
 
 class EqualsValidator implements Validator {
@@ -338,6 +408,10 @@ class EqualsValidator implements Validator {
     } else {
       return array($this->message);
     }
+  }
+
+  function validateScript($key) {
+    return "(function() { return null; })();";
   }
 }
 
