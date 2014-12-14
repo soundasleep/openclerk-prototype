@@ -6,6 +6,8 @@ Openclerk\Config::merge(array(
   "site_name" => "Openclerk2 Test",
   "absolute_url" => "http://localhost/openclerk2/",
 
+  "heavy_requests_seconds" => 20,
+
   "display_errors" => true,
 
   "database_name" => "clerk2",
@@ -127,3 +129,14 @@ function get_user() {
   }
   return $user;
 }
+
+require(__DIR__ . "/heavy.php");
+
+// set up heavy request checks
+\Openclerk\Events::on('openid_validate', function($lightopenid) {
+  check_heavy_request();
+});
+
+\Openclerk\Events::on('oauth2_auth', function($oauth2) {
+  check_heavy_request();
+});

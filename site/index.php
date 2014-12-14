@@ -186,16 +186,17 @@ page_footer();
 // - components can provide assets
 // - build
 // - grunt wrapper for Spritify
+// - addresses
+// - heavy requests (OpenID)
 
 // What's next?
+// - test everything! components + integration. important!
 // - extended user properties
 // - form validations
 // - user roles
 // - admin interface for exceptions
-// - heavy requests (OpenID)
 // - forgotten passwords
 // - multiple OpenIDs/OAuths per user
-// - addresses
 // - accounts
 // - graphs
 // - technical indicators
