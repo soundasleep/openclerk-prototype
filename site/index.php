@@ -72,6 +72,7 @@ if ($user) {
 <li><?php echo link_to(url_for('security/register/password'), "Register with password"); ?></li>
 <li><?php echo link_to(url_for('security/register/openid'), "Register with OpenID"); ?></li>
 <li><?php echo link_to(url_for('security/register/oauth2'), "Register with OAuth2"); ?></li>
+<li><?php echo link_to(url_for('security/signup/password'), "Signup with password"); ?></li>
 <li><?php echo link_to(url_for('security/add/password'), "Add password"); ?></li>
 <li><?php echo link_to(url_for('security/add/openid'), "Add OpenID identity"); ?></li>
 <li><?php echo link_to(url_for('security/add/oauth2'), "Add OAuth2 identity"); ?></li>
@@ -192,7 +193,8 @@ page_footer();
 // What's next?
 // - test everything! components + integration. important!
 // - extended user properties
-// - form validations
+// - forms, form validations, Javascript form validations
+// - select2's
 // - user roles
 // - admin interface for exceptions
 // - forgotten passwords

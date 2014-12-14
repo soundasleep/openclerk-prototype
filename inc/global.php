@@ -91,6 +91,7 @@ function link_to($url, $text = false) {
   "security/register/password" => "security/register.php",
   "security/register/:key" => "security/register-:key.php",
   "security/add/:key" => "security/add-:key.php",
+  "security/signup/password" => "security/signup.php",
 ));
 
 function page_header($title, $id = "", $arguments = array()) {
