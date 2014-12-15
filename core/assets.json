@@ -4,9 +4,10 @@
   ],
   "coffee": [
     "js/currencies.coffee",
-    "js/forms.coffee"
+    "js/forms.coffee",
+    "js/validators/*.coffee"
   ],
   "images": [
-    "images/"
+    "images/*"
   ]
 }

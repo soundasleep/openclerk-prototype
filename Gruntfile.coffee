@@ -38,11 +38,10 @@ module.exports = (grunt) ->
 
     spritify:
       dist:
-        options: {
+        options:
           input: 'site/generated/css/generated-scss.css',
           output: 'site/generated/css/generated-scss.css',
           png: '../images/sprites.png'
-        }
 
   grunt.loadNpmTasks 'grunt-bg-shell'
   grunt.loadNpmTasks 'grunt-contrib-clean'
