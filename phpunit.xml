@@ -2,10 +2,12 @@
   <testsuites>
     <testsuite name="Routing tests">
       <!-- loads all *Test.php -->
+      <directory>test</directory>
       <directory>vendor/openclerk/config/test</directory>
       <directory>vendor/openclerk/db/test</directory>
       <directory>vendor/openclerk/emails/test</directory>
       <directory>vendor/openclerk/events/test</directory>
+      <directory>vendor/openclerk/exceptions/test</directory>
       <directory>vendor/openclerk/jobs/test</directory>
       <directory>vendor/openclerk/pages/test</directory>
       <directory>vendor/openclerk/routing/test</directory>
