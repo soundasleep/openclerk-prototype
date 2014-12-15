@@ -4,3 +4,8 @@ inc/private.php
 site/generated
 .sass-cache
 node_modules/
+
+# phpdox
+build/
+docs/
+phpdox.phar
