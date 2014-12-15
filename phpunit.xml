@@ -1,0 +1,25 @@
+<phpunit stop-on-failure="true" stop-on-error="true">
+  <testsuites>
+    <testsuite name="Routing tests">
+      <!-- loads all *Test.php -->
+      <directory>vendor/openclerk/config/test</directory>
+      <directory>vendor/openclerk/db/test</directory>
+      <directory>vendor/openclerk/emails/test</directory>
+      <directory>vendor/openclerk/events/test</directory>
+      <directory>vendor/openclerk/jobs/test</directory>
+      <directory>vendor/openclerk/pages/test</directory>
+      <directory>vendor/openclerk/routing/test</directory>
+      <directory>vendor/openclerk/templates/test</directory>
+      <directory>vendor/openclerk/users/test</directory>
+      <directory>vendor/soundasleep/php-helpers/test</directory>
+      <directory>vendor/soundasleep/component-discovery/test</directory>
+      <directory>vendor/soundasleep/asset-discovery/test</directory>
+      <directory>vendor/soundasleep/html2text/tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <!-- The <php> element and its children can be used to configure PHP settings, constants, and global variables. It can also be used to prepend the include_path. -->
+  <php>
+    <const name="NO_OUTPUT" value="true" />
+  </php>
+</phpunit>
