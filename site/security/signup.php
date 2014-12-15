@@ -164,7 +164,8 @@ class Form {
     // TODO XSS
     foreach ($this->fields as $key => $value) {
       $rowClass = isset($this->lastErrors[$key]) ? "has-error" : "";
-      $out .= "<tr class=\"" . $rowClass . "\">";
+      $fieldName = $this->getFormName() . "[" . $key . "]";
+      $out .= "<tr class=\"" . $rowClass . "\" id=\"row_" . $this->getFieldId($fieldName) . "\">";
       if ($this->isKeyValueField($value['type'])) {
         $out .= "<th>";
         $out .= $value['title'];
@@ -175,19 +176,19 @@ class Form {
         $out .= $this->renderField($key, $value['type'], isset($this->lastData[$key]) ? $this->lastData[$key] : null);
         $out .= "</td>";
         if (isset($this->lastErrors[$key])) {
-          $out .= "<td class=\"errors\"><ul>\n";
+          $out .= "<td class=\"error-field errors\"><ul>\n";
           foreach ($this->lastErrors[$key] as $error) {
             $out .= "<li>" . $error . "</li>\n";
           }
           $out .= "</ul></td>\n";
         } else {
-          $out .= "<td class=\"no-errors\"></td>\n";
+          $out .= "<td class=\"error-field no-errors\"></td>\n";
         }
       } else {
         $out .= "<td colspan=\"2\" class=\"row\">\n";
         $out .= $this->renderField($key, $value['type'], isset($this->lastData[$key]) ? $this->lastData[$key] : null);
         $out .= "\n</td>\n";
-        $out .= "<td class=\"no-errors\"></td>\n";
+        $out .= "<td class=\"error-field no-errors\"></td>\n";
       }
       $out .= "</tr>\n";
     }
@@ -207,28 +208,47 @@ class Form {
     // TODO maybe replace this with templates?
     // although this will generate a lot of filesystem load on page render
 
-    $out = "";
-    $out .= "$(document).ready(function() {\n";
-    $out .= "  var form = $(\"#form_" . $this->getFormName() . "\");\n";
-    $out .= "  form.submit(function() {\n";
-    $out .= "    var errors = {}; var temp = null;\n";
-    foreach ($this->fields as $key => $value) {
-      $out .= "  var " . $key . " = $(form)" . $this->getFieldValueScript($key, $value['type']) . "\n";
-      foreach ($value['validators'] as $validator) {
-        $out .= "  temp = " . $validator->validateScript($key) . ";\n";
-        $out .= "  if (temp !== null) {\n";
-        $out .= "    if (typeof errors[" . $key . "] == 'undefined') {\n";
-        $out .= "      errors[" . $key . "] = []\n";
-        $out .= "    }\n";
-        $out .= "    $(temp).each(function(i, message) { errors[" . $key . "].push(message); });\n";
-        $out .= "  }\n";
+    $json = array();
+
+    foreach ($this->fields as $key => $field) {
+      $fieldName = $this->getFormName() . "[" . $key . "]";
+
+      $validators = array();
+      foreach ($field['validators'] as $v) {
+        $validators[] = $v->getScriptValidator();
       }
 
-      // we can't do anything yet with server-side validators in #validate()
-      $out .= "  alert(errors);\n";
+      $json[$key] = array(
+        'id' => $this->getFieldId($fieldName),
+        'type' => $field['type'],
+        'validators' => $validators,
+      );
     }
-    $out .= "  });\n";
-    $out .= "});\n";
+
+    $out = "OpenclerkForms.addForm(" . json_encode("form_" . $this->getFormName()) . ", " . json_encode($json) . ")";
+
+    // $out = "";
+    // $out .= "$(document).ready(function() {\n";
+    // $out .= "  var form = $(\"#form_" . $this->getFormName() . "\");\n";
+    // $out .= "  form.submit(function() {\n";
+    // $out .= "    var errors = {}; var temp = null;\n";
+    // foreach ($this->fields as $key => $value) {
+    //   $out .= "  var " . $key . " = $(form)" . $this->getFieldValueScript($key, $value['type']) . "\n";
+    //   foreach ($value['validators'] as $validator) {
+    //     $out .= "  temp = " . $validator->validateScript($key) . ";\n";
+    //     $out .= "  if (temp !== null) {\n";
+    //     $out .= "    if (typeof errors[" . $key . "] == 'undefined') {\n";
+    //     $out .= "      errors[" . $key . "] = []\n";
+    //     $out .= "    }\n";
+    //     $out .= "    $(temp).each(function(i, message) { errors[" . $key . "].push(message); });\n";
+    //     $out .= "  }\n";
+    //   }
+
+    //   // we can't do anything yet with server-side validators in #validate()
+    //   $out .= "  alert(errors);\n";
+    // }
+    // $out .= "  });\n";
+    // $out .= "});\n";
 
     return $out;
 
@@ -238,7 +258,7 @@ class Form {
     return $type != 'submit';
   }
 
-  function getfieldId($s) {
+  function getFieldId($s) {
     return preg_replace("#[^a-z0-9_]#i", "_", $s);
   }
 
@@ -259,23 +279,6 @@ class Form {
 
       case "submit":
         return "<input type=\"submit\" name=\"" . htmlspecialchars($fieldName) . "\" id=\"" . htmlspecialchars($id) . "\" value=\"" . htmlspecialchars($this->fields[$key]['title']) . "\">";
-
-      default:
-        throw new FormRenderingException("Unknown field to render '$type'");
-
-    }
-  }
-
-  function getFieldValueScript($key, $type) {
-    $fieldName = $this->getFormName() . "[" . $key . "]";
-    $id = $this->getFieldId($fieldName);
-
-    switch ($type) {
-      case "text":
-      case "email":
-      case "password":
-      case "submit":
-        return ".find(\"input#$id\").val()";
 
       default:
         throw new FormRenderingException("Unknown field to render '$type'");
@@ -338,6 +341,11 @@ interface Validator {
    * @return an error message if the value is not valid
    */
   function invalid(Form $form, $data);
+
+  /**
+   * Get the Javascript validator code for this validator.
+   */
+  function getScriptValidator();
 }
 
 class RequiredValidator implements Validator {
@@ -353,8 +361,8 @@ class RequiredValidator implements Validator {
     }
   }
 
-  function validateScript($key) {
-    return "(function() { return $key != null && $key.length > 0; })();";
+  function getScriptValidator() {
+    return array("OpenclerkForms.RequiredValidator", $this->message);
   }
 }
 
@@ -372,8 +380,8 @@ class MaxLengthValidator implements Validator {
     }
   }
 
-  function validateScript($key) {
-    return "(function() { return $key != null && $key.length < " . $this->number . "; })();";
+  function getScriptValidator() {
+    return array("OpenclerkForms.MaxLengthValidator", $this->number, $this->message);
   }
 }
 
@@ -391,8 +399,8 @@ class MinLengthValidator implements Validator {
     }
   }
 
-  function validateScript($key) {
-    return "(function() { return $key != null && $key.length > " . $this->number . "; })();";
+  function getScriptValidator() {
+    return array("OpenclerkForms.MinLengthValidator", $this->number, $this->message);
   }
 }
 
@@ -410,8 +418,8 @@ class EqualsValidator implements Validator {
     }
   }
 
-  function validateScript($key) {
-    return "(function() { return null; })();";
+  function getScriptValidator() {
+    return array("OpenclerkForms.EqualsValidator", $this->key, $this->message);
   }
 }
 
@@ -426,6 +434,10 @@ class EmailValidator implements Validator {
     } else {
       return array($this->message);
     }
+  }
+
+  function getScriptValidator() {
+    return array("OpenclerkForms.EmailValidator", $this->message);
   }
 }
 

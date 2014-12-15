@@ -3,7 +3,8 @@
     "css/currencies.scss"
   ],
   "coffee": [
-    "js/currencies.coffee"
+    "js/currencies.coffee",
+    "js/forms.coffee"
   ],
   "images": [
     "images/"
