@@ -1,10 +1,9 @@
 {
   "scss": [
-    "css/currencies.scss"
+    "css/*.scss"
   ],
   "coffee": [
-    "js/currencies.coffee",
-    "js/forms.coffee",
+    "js/*.coffee",
     "js/validators/*.coffee"
   ],
   "images": [
