@@ -16,6 +16,11 @@ module.exports = (grunt) ->
         cmd: 'php -f vendor/soundasleep/component-discovery/generate.php -- .'
         fail: true
 
+      # TODO add a grunt npm task to wrap this
+      translationDiscovery:
+        cmd: 'php -f vendor/soundasleep/translation-discovery/generate.php -- .'
+        fail: true
+
     sass:
       dist:
         files: [{
@@ -53,6 +58,7 @@ module.exports = (grunt) ->
     'clean',
     'bgShell:assetDiscovery',
     'bgShell:componentDiscovery',
+    'bgShell:translationDiscovery',
     'sass',
     'coffee',
     'spritify'

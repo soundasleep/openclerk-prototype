@@ -174,6 +174,11 @@ if ($user) {
 <li><?php echo t("not translated"); ?></li>
 <li>one <?php echo t("address"); ?>, <?php echo plural(10, 'address', 'addresses'); ?></li>
 <li><?php echo t("I have :colours.", array(':colours' => plural(6, 'colour'))); ?></li>
+<li>Locales available: <?php
+  foreach (\Openclerk\I18n::getAvailableLocales() as $code => $locale) {
+    echo "<b>" . $code . "</b> = " . get_class($locale) . " ";
+  }
+?></li>
 </ul>
 
 <?php

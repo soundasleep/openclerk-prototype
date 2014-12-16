@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a4b889884f2d78973abf5099ec78080",
+    "hash": "32717f99997c5bc98476a382708a4010",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -338,12 +338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/i18n.git",
-                "reference": "650bbde618fe7201016936077f17e6c9ef331936"
+                "reference": "97f5595b9a444ed3b4ce73038ed53ebbe8670a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/i18n/zipball/650bbde618fe7201016936077f17e6c9ef331936",
-                "reference": "650bbde618fe7201016936077f17e6c9ef331936",
+                "url": "https://api.github.com/repos/openclerk/i18n/zipball/97f5595b9a444ed3b4ce73038ed53ebbe8670a90",
+                "reference": "97f5595b9a444ed3b4ce73038ed53ebbe8670a90",
                 "shasum": ""
             },
             "require": {
@@ -365,7 +365,7 @@
                 "source": "https://github.com/openclerk/i18n/tree/master",
                 "issues": "https://github.com/openclerk/i18n/issues"
             },
-            "time": "2014-12-16 07:36:24"
+            "time": "2014-12-16 07:51:48"
         },
         {
             "name": "openclerk/jobs",
@@ -633,12 +633,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/asset-discovery.git",
-                "reference": "70496c4c9ded690625f5d30a1b7897ce9b31c71b"
+                "reference": "fcc517ba295eeddd99140c6e1a47c2a6a373054e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/asset-discovery/zipball/70496c4c9ded690625f5d30a1b7897ce9b31c71b",
-                "reference": "70496c4c9ded690625f5d30a1b7897ce9b31c71b",
+                "url": "https://api.github.com/repos/soundasleep/asset-discovery/zipball/fcc517ba295eeddd99140c6e1a47c2a6a373054e",
+                "reference": "fcc517ba295eeddd99140c6e1a47c2a6a373054e",
                 "shasum": ""
             },
             "require-dev": {
@@ -646,10 +646,10 @@
             },
             "type": "library",
             "support": {
-                "source": "https://github.com/soundasleep/asset-discovery/tree/0.1.1",
+                "source": "https://github.com/soundasleep/asset-discovery/tree/master",
                 "issues": "https://github.com/soundasleep/asset-discovery/issues"
             },
-            "time": "2014-12-15 23:15:01"
+            "time": "2014-12-16 08:25:23"
         },
         {
             "name": "soundasleep/component-discovery",
@@ -783,6 +783,27 @@
                 "issues": "https://github.com/soundasleep/php-helpers/issues"
             },
             "time": "2014-12-14 06:48:18"
+        },
+        {
+            "name": "soundasleep/translation-discovery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soundasleep/translation-discovery.git",
+                "reference": "a2f098cd010f301df15855a48f303d121abb4dbf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soundasleep/translation-discovery/zipball/a2f098cd010f301df15855a48f303d121abb4dbf",
+                "reference": "a2f098cd010f301df15855a48f303d121abb4dbf",
+                "shasum": ""
+            },
+            "type": "library",
+            "support": {
+                "source": "https://github.com/soundasleep/translation-discovery/tree/master",
+                "issues": "https://github.com/soundasleep/translation-discovery/issues"
+            },
+            "time": "2014-12-16 08:34:04"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1641,6 +1662,7 @@
     "stability-flags": {
         "soundasleep/component-discovery": 20,
         "soundasleep/asset-discovery": 20,
+        "soundasleep/translation-discovery": 20,
         "openclerk/config": 20,
         "openclerk/users": 20,
         "openclerk/db": 20,

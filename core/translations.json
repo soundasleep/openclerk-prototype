@@ -1,0 +1,4 @@
+{
+  "fr": "translations/fr.json",
+  "de": "translations/de/*.json"
+}

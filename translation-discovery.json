@@ -1,0 +1,7 @@
+{
+  "src": ["vendor/*/*", "core"],
+  "translations": {
+    "fr": "site/generated/translations/fr.json",
+    "de": "site/generated/translations/de.json"
+  }
+}
