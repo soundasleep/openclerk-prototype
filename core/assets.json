@@ -3,8 +3,7 @@
     "css/*.scss"
   ],
   "coffee": [
-    "js/*.coffee",
-    "js/validators/*.coffee"
+    "js/*.coffee"
   ],
   "images": [
     "images/*"
