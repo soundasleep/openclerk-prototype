@@ -141,3 +141,5 @@ require(__DIR__ . "/heavy.php");
 \Openclerk\Events::on('oauth2_auth', function($oauth2) {
   check_heavy_request();
 });
+
+\Openclerk\I18n::addAvailableLocales(DiscoveredComponents\Locales::getAllInstances());

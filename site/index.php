@@ -176,7 +176,7 @@ if ($user) {
 <li><?php echo t("I have :colours.", array(':colours' => plural(6, 'colour'))); ?></li>
 <li>Locales available: <?php
   foreach (\Openclerk\I18n::getAvailableLocales() as $code => $locale) {
-    echo "<b>" . $code . "</b> = " . get_class($locale) . " ";
+    echo "<b>" . $code . "</b> = <a href=\"locale.php?locale=" . htmlspecialchars($code) . "\">" . get_class($locale) . "</a> ";
   }
 ?></li>
 </ul>
