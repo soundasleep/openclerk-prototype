@@ -167,6 +167,15 @@ if ($user) {
 ?>
 </ul>
 
+<h2>i18n</h2>
+
+<ul>
+<li><?php echo t("translated"); ?></li>
+<li><?php echo t("not translated"); ?></li>
+<li>one <?php echo t("address"); ?>, <?php echo plural(10, 'address', 'addresses'); ?></li>
+<li><?php echo t("I have :colours.", array(':colours' => plural(6, 'colour'))); ?></li>
+</ul>
+
 <?php
 
 page_footer();
@@ -189,16 +198,15 @@ page_footer();
 // - grunt wrapper for Spritify
 // - addresses
 // - heavy requests (OpenID)
+// - forms, form validations, Javascript form validations
 
 // What's next?
 // - test everything! components + integration. important!
 // - extended user properties
-// - forms, form validations, Javascript form validations
 // - select2's
 // - user roles
 // - admin interface for exceptions
-// - forgotten passwords
-// - multiple OpenIDs/OAuths per user
+// - 2fa
 // - accounts
 // - graphs
 // - technical indicators

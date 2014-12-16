@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6d3f1db381778744da8893e0a2741d16",
+    "hash": "4a4b889884f2d78973abf5099ec78080",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -249,12 +249,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/events.git",
-                "reference": "fcb0fa6968e0181a94b1a29e2df0186519658b50"
+                "reference": "70e93ef6bc69a830030f79061a2c53e8f544a70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/events/zipball/fcb0fa6968e0181a94b1a29e2df0186519658b50",
-                "reference": "fcb0fa6968e0181a94b1a29e2df0186519658b50",
+                "url": "https://api.github.com/repos/openclerk/events/zipball/70e93ef6bc69a830030f79061a2c53e8f544a70a",
+                "reference": "70e93ef6bc69a830030f79061a2c53e8f544a70a",
                 "shasum": ""
             },
             "type": "library",
@@ -267,7 +267,7 @@
                 "source": "https://github.com/openclerk/events/tree/master",
                 "issues": "https://github.com/openclerk/events/issues"
             },
-            "time": "2014-12-10 02:51:49"
+            "time": "2014-12-16 07:34:34"
         },
         {
             "name": "openclerk/exceptions",
@@ -309,13 +309,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/forms.git",
-                "reference": "cc397f99822f72f9b6e65f68e2163dfcb5fc9968"
+                "reference": "9ab095bf8c22106974684e2a06d44973b420f1c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/forms/zipball/cc397f99822f72f9b6e65f68e2163dfcb5fc9968",
-                "reference": "cc397f99822f72f9b6e65f68e2163dfcb5fc9968",
+                "url": "https://api.github.com/repos/openclerk/forms/zipball/9ab095bf8c22106974684e2a06d44973b420f1c5",
+                "reference": "9ab095bf8c22106974684e2a06d44973b420f1c5",
                 "shasum": ""
+            },
+            "require": {
+                "soundasleep/php-helpers": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -327,7 +330,42 @@
                 "source": "https://github.com/openclerk/forms/tree/master",
                 "issues": "https://github.com/openclerk/forms/issues"
             },
-            "time": "2014-12-15 23:46:41"
+            "time": "2014-12-15 23:58:17"
+        },
+        {
+            "name": "openclerk/i18n",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/i18n.git",
+                "reference": "650bbde618fe7201016936077f17e6c9ef331936"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/i18n/zipball/650bbde618fe7201016936077f17e6c9ef331936",
+                "reference": "650bbde618fe7201016936077f17e6c9ef331936",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/events": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/i18n/tree/master",
+                "issues": "https://github.com/openclerk/i18n/issues"
+            },
+            "time": "2014-12-16 07:36:24"
         },
         {
             "name": "openclerk/jobs",
@@ -1614,7 +1652,8 @@
         "openclerk/exceptions": 20,
         "openclerk/routing": 20,
         "openclerk/pages": 20,
-        "openclerk/forms": 20
+        "openclerk/forms": 20,
+        "openclerk/i18n": 20
     },
     "prefer-stable": false,
     "platform": [],
