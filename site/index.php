@@ -172,8 +172,9 @@ if ($user) {
 <ul>
 <li><?php echo t("translated"); ?></li>
 <li><?php echo t("not translated"); ?></li>
-<li>one <?php echo t("address"); ?>, <?php echo plural(10, 'address', 'addresses'); ?></li>
-<li><?php echo t("I have :colours.", array(':colours' => plural(6, 'colour'))); ?></li>
+<li>one <?php echo t("address"); ?>, <?php echo plural('address', 'addresses', 10); ?></li>
+<li><?php echo t("I have :colours.", array(':colours' => plural('colour', 6))); ?></li>
+<li><?php $s = "to be translated" /* i18n */; ?></li>
 <li>Locales available: <?php
   foreach (\Openclerk\I18n::getAvailableLocales() as $code => $locale) {
     echo "<b>" . $code . "</b> = <a href=\"locale.php?locale=" . htmlspecialchars($code) . "\">" . get_class($locale) . "</a> ";

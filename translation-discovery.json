@@ -3,5 +3,7 @@
   "translations": {
     "fr": "site/generated/translations/fr.json",
     "de": "site/generated/translations/de.json"
-  }
+  },
+  "templates": ["vendor/openclerk", "core", "site"],
+  "template": "site/locale/template.json"
 }
