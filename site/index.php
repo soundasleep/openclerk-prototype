@@ -205,6 +205,8 @@ page_footer();
 // - addresses
 // - heavy requests (OpenID)
 // - forms, form validations, Javascript form validations
+// - spritify with high res sprites
+// - basic component tests
 
 // What's next?
 // - test everything! components + integration. important!
@@ -226,5 +228,4 @@ page_footer();
 // - metrics
 // - grunt wrapper for component-discovery
 // - grunt wrapper for asset-discovery
-// - spritify with high res sprites
 
