@@ -22,7 +22,8 @@
     "openclerk/routing": "dev-master",
     "openclerk/pages": "dev-master",
     "openclerk/forms": "dev-master",
-    "openclerk/i18n": "dev-master"
+    "openclerk/i18n": "dev-master",
+    "openclerk/apis": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -69,6 +70,9 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/i18n"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/apis"
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"

@@ -92,7 +92,15 @@ function link_to($url, $text = false) {
   "security/register/:key" => "security/register-:key.php",
   "security/add/:key" => "security/add-:key.php",
   "security/signup/password" => "security/signup.php",
+  // could also do api/v1/core/:key
 ));
+
+// load up API routes
+foreach (DiscoveredComponents\Apis::getAllInstances() as $uri => $handler) {
+  \Openclerk\Router::addRoutes(array(
+    $uri => $handler,
+  ));
+}
 
 function page_header($title, $id = "", $arguments = array()) {
   $arguments['title'] = $title;

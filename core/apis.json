@@ -1,0 +1,4 @@
+{
+  "api/v1/currencies": "\\Core\\Api\\Currencies",
+  "api/v1/currency/:currency": "\\Core\\Api\\Currency"
+}

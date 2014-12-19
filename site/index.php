@@ -182,6 +182,15 @@ if ($user) {
 ?></li>
 </ul>
 
+<h2>APIs</h2>
+
+<ul>
+<li><?php echo link_to(url_for('api/v1/currencies'), "api/v1/currencies"); ?></li>
+<li><?php echo link_to(url_for('api/v1/currency/btc'), "api/v1/currency/btc"); ?></li>
+<li><?php echo link_to(url_for('api/v1/currency/invalid'), "api/v1/currency/invalid"); ?></li>
+<li><?php echo plural("API", count(DiscoveredComponents\Apis::getKeys())); ?></li>
+</ul>
+
 <?php
 
 page_footer();
@@ -206,6 +215,7 @@ page_footer();
 // - heavy requests (OpenID)
 // - forms, form validations, Javascript form validations
 // - spritify with high res sprites
+// - grunt wrapper for spritify
 // - basic component tests
 
 // What's next?
@@ -221,6 +231,7 @@ page_footer();
 // - reports
 // - tests
 // - i18n, UI
+// - wizards
 // - content types, exception handling for content types
 // - API wrappers for jobs/accounts
 // - components can define UIs (maybe through DiscoveredComponents\UserInterfaces which are wrapped in templates?)
@@ -228,4 +239,5 @@ page_footer();
 // - metrics
 // - grunt wrapper for component-discovery
 // - grunt wrapper for asset-discovery
+// - grunt wrapper for translation-discovery
 

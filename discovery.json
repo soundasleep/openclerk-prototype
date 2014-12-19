@@ -3,7 +3,8 @@
     "currencies": "currencies.json",
     "jobs": "jobs.json",
     "migrations": "migrations.json",
-    "locales": "locales.json"
+    "locales": "locales.json",
+    "apis": "apis.json"
   },
   "src": ["vendor/*/*", "core"],
   "dest": "generated/components"
