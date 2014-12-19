@@ -13,6 +13,8 @@ Openclerk\Config::merge(array(
   "database_name" => "clerk2",
   "database_username" => "clerk2",
   "database_password" => "clerk2",
+  "database_host_master" => "localhost",
+  "database_host_slave" => "localhost",
 
   "user_password_reset_expiry" => "3 days",
   "user_password_salt" => "abc123",
@@ -32,8 +34,13 @@ function config($key, $default = null) {
   return Openclerk\Config::get($key, $default);
 }
 
+// start a session, if one has not already been started
+session_start();
+
 function db() {
-  return new \Db\Connection(
+  return new \Db\ReplicatedConnection(
+    config("database_host_master"),
+    config("database_host_slave"),
     config("database_name"),
     config("database_username"),
     config("database_password")
@@ -80,8 +87,6 @@ Openclerk\Events::on('user_deleted', function($user) {
     "email" => $user->getEmail(),
   ));
 });
-
-session_start();
 
 function link_to($url, $text = false) {
   if ($text === false) {

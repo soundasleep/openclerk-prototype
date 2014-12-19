@@ -233,6 +233,7 @@ page_footer();
 // - reports
 // - tests
 // - i18n, UI
+// - i18n for emails
 // - wizards
 // - content types, exception handling for content types
 // - API wrappers for jobs/accounts
