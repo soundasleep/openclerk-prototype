@@ -23,7 +23,8 @@
     "openclerk/pages": "dev-master",
     "openclerk/forms": "dev-master",
     "openclerk/i18n": "dev-master",
-    "openclerk/apis": "dev-master"
+    "openclerk/apis": "dev-master",
+    "openclerk/metrics": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -73,6 +74,9 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/apis"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/metrics"
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"

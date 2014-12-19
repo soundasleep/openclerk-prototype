@@ -48,6 +48,12 @@ function send_email($to, $template_id, $args = array()) {
   Emails\Email::send($to, $template_id, $args);
 }
 
+// set up metrics
+Openclerk\MetricsHandler::init(db());
+
+// trigger page load metrics
+Openclerk\Events::trigger('page_init', null);
+
 Openclerk\Events::on('email_sent', function($email) {
   // insert in database keys
   $q = db()->prepare("INSERT INTO emails SET
@@ -103,6 +109,9 @@ foreach (DiscoveredComponents\Apis::getAllInstances() as $uri => $handler) {
 }
 
 function page_header($title, $id = "", $arguments = array()) {
+  // trigger page load metrics
+  Openclerk\Events::trigger('page_start', null);
+
   $arguments['title'] = $title;
   $arguments['id'] = $id;
   \Pages\PageRenderer::header($arguments);
@@ -110,6 +119,16 @@ function page_header($title, $id = "", $arguments = array()) {
 
 function page_footer($arguments = array()) {
   \Pages\PageRenderer::footer($arguments);
+
+  // trigger page load metrics
+  Openclerk\Events::trigger('page_end', null);
+
+  // print out metrics stats
+  $results = Openclerk\MetricsHandler::getInstance()->printResults();
+  if ($results) {
+    echo "\n<!-- Metrics: " . print_r($results, true) . " -->";
+    echo "<div><b>Metrics:</b> " . print_r($results, true) . "</div>";
+  }
 }
 
 function require_template($template_id, $arguments = array()) {

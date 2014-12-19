@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f5bb068d71f2274d38ec5476154766b",
+    "hash": "74601601879964276f3d5ef7452cd87a",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -163,12 +163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/apis.git",
-                "reference": "851d92a2941d19c348e77e6f0857292ca52b43f9"
+                "reference": "8ad6fbbea30ae0a3a9e8d5ac81a734cbe05ef9b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/apis/zipball/851d92a2941d19c348e77e6f0857292ca52b43f9",
-                "reference": "851d92a2941d19c348e77e6f0857292ca52b43f9",
+                "url": "https://api.github.com/repos/openclerk/apis/zipball/8ad6fbbea30ae0a3a9e8d5ac81a734cbe05ef9b2",
+                "reference": "8ad6fbbea30ae0a3a9e8d5ac81a734cbe05ef9b2",
                 "shasum": ""
             },
             "type": "library",
@@ -181,7 +181,7 @@
                 "source": "https://github.com/openclerk/apis/tree/master",
                 "issues": "https://github.com/openclerk/apis/issues"
             },
-            "time": "2014-12-18 23:33:07"
+            "time": "2014-12-19 00:19:30"
         },
         {
             "name": "openclerk/config",
@@ -423,6 +423,37 @@
             "time": "2014-12-05 02:38:15"
         },
         {
+            "name": "openclerk/metrics",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/metrics.git",
+                "reference": "7dad9e89b3464b635cbacf5b6a077d9247472495"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/metrics/zipball/7dad9e89b3464b635cbacf5b6a077d9247472495",
+                "reference": "7dad9e89b3464b635cbacf5b6a077d9247472495",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/config": "dev-master",
+                "openclerk/db": "dev-master",
+                "openclerk/events": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "support": {
+                "source": "https://github.com/openclerk/metrics/tree/master",
+                "issues": "https://github.com/openclerk/metrics/issues"
+            },
+            "time": "2014-12-19 05:43:44"
+        },
+        {
             "name": "openclerk/pages",
             "version": "dev-master",
             "source": {
@@ -454,12 +485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/routing.git",
-                "reference": "b21d1f34c01ccd077850e95778a489bcf7061f24"
+                "reference": "94715fde9f0176b7496e07e49fd8ce7c9b114f0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/routing/zipball/b21d1f34c01ccd077850e95778a489bcf7061f24",
-                "reference": "b21d1f34c01ccd077850e95778a489bcf7061f24",
+                "url": "https://api.github.com/repos/openclerk/routing/zipball/94715fde9f0176b7496e07e49fd8ce7c9b114f0f",
+                "reference": "94715fde9f0176b7496e07e49fd8ce7c9b114f0f",
                 "shasum": ""
             },
             "require": {
@@ -481,7 +512,7 @@
                 "source": "https://github.com/openclerk/routing/tree/master",
                 "issues": "https://github.com/openclerk/routing/issues"
             },
-            "time": "2014-12-15 02:59:53"
+            "time": "2014-12-19 00:01:43"
         },
         {
             "name": "openclerk/templates",
@@ -1799,6 +1830,7 @@
         "openclerk/forms": 20,
         "openclerk/i18n": 20,
         "openclerk/apis": 20,
+        "openclerk/metrics": 20,
         "soundasleep/component-tests": 20
     },
     "prefer-stable": false,

@@ -225,6 +225,8 @@ page_footer();
 // - user roles
 // - admin interface for exceptions
 // - 2fa
+// - haml for templates?
+// - dos protection
 // - accounts
 // - graphs
 // - technical indicators
@@ -236,7 +238,11 @@ page_footer();
 // - API wrappers for jobs/accounts
 // - components can define UIs (maybe through DiscoveredComponents\UserInterfaces which are wrapped in templates?)
 // - transactions
+// - transaction reports
+// - xero integration
 // - metrics
+// - external API statuses
+// - site status metrics
 // - grunt wrapper for component-discovery
 // - grunt wrapper for asset-discovery
 // - grunt wrapper for translation-discovery
