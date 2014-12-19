@@ -11,7 +11,7 @@
     <project name="Openclerk" source="${basedir}/vendor/openclerk" workdir="${basedir}/build/phpdox/xml">
         <collector publiconly="false" backend="parser">
             <include mask="*.php" />
-            <exclude mask="" />
+            <exclude mask="**/vendor/**/vendor/**" />
             <inheritance resolve="true">
             </inheritance>
 
