@@ -1,0 +1,13 @@
+.navigation
+  %ul
+    %li
+      :php
+        echo link_to(url_for("index"), "Home")
+    - if (Users\User::getInstance(db()))
+      %li
+        :php
+          echo link_to(url_for("security/logout"), "Logout")
+    - else
+      %li
+        :php
+          echo link_to(url_for("security/login/password"), "Login")
