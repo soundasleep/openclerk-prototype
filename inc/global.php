@@ -21,6 +21,9 @@ Openclerk\Config::merge(array(
   "autologin_expire_days" => 30,
   "openid_host" => "localhost",
 
+  // metrics
+  "metrics_store" => true,    // yes, we want to store metrics in the db
+
   // in minutes
   "job_address_interval" => 0,
   "get_contents_timeout" => 10, // in seconds, default 300s

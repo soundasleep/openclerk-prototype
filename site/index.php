@@ -191,6 +191,12 @@ if ($user) {
 <li><?php echo plural("API", count(DiscoveredComponents\Apis::getKeys())); ?></li>
 </ul>
 
+<h2>Metrics</h2>
+
+<ul>
+<li><?php echo link_to(url_for('slow-curl'), "Slow CURL"); ?></li>
+</ul>
+
 <?php
 
 page_footer();
