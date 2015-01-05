@@ -28,43 +28,16 @@
   },
   "repositories": [{
     "type": "vcs",
-    "url": "https://github.com/soundasleep/component-discovery"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/soundasleep/asset-discovery"
-  }, {
-    "type": "vcs",
     "url": "https://github.com/soundasleep/translation-discovery"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/openclerk/config"
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/users"
   }, {
     "type": "vcs",
-    "url": "https://github.com/openclerk/db"
-  }, {
-    "type": "vcs",
     "url": "https://github.com/openclerk/jobs"
   }, {
     "type": "vcs",
-    "url": "https://github.com/openclerk/templates"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/openclerk/emails"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/openclerk/events"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/openclerk/exceptions"
-  }, {
-    "type": "vcs",
     "url": "https://github.com/openclerk/routing"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/openclerk/pages"
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/forms"
@@ -73,16 +46,9 @@
     "url": "https://github.com/openclerk/i18n"
   }, {
     "type": "vcs",
-    "url": "https://github.com/openclerk/apis"
-  }, {
-    "type": "vcs",
-    "url": "https://github.com/openclerk/metrics"
-  }, {
-    "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"
   }],
   "require-dev": {
-    "phpunit/phpunit": "~4.4",
     "soundasleep/component-tests": "dev-master"
   }
 }
