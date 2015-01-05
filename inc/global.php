@@ -55,7 +55,7 @@ function send_email($to, $template_id, $args = array()) {
   // TODO site_url
   $args['site_email'] = config('phpmailer_from');
 
-  Emails\Email::send($to, $template_id, $args);
+  return Emails\Email::send($to, $template_id, $args);
 }
 
 // set up metrics
@@ -72,6 +72,7 @@ Openclerk\Events::on('email_sent', function($email) {
     to_email=:to_email,
     subject=:subject,
     template_id=:template_id,
+    message_id=:message_id,
     arguments=:arguments");
   $q->execute(array(
     "user_id" => $email['user_id'],
@@ -79,6 +80,7 @@ Openclerk\Events::on('email_sent', function($email) {
     "to_email" => $email['to_email'],
     "subject" => $email['subject'],
     "template_id" => $email['template_id'],
+    "message_id" => $email['message_id'],
     "arguments" => serialize($email['arguments']),
   ));
 });

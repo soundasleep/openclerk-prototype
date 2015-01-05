@@ -21,16 +21,7 @@ page_header(config('site_name'), "page_index");
 
 echo "<p>(" . implode(", ", DiscoveredComponents\Migrations::getKeys()) . ")</p>";
 
-class MyLogger extends \Db\Logger {
-  function log($s) {
-    echo "<li>" . htmlspecialchars($s) . "</li>";
-  }
-  function error($s) {
-    echo "<li class=\"error\" style=\"color:red;\">" . htmlspecialchars($s) . "</li>";
-  }
-}
-
-$logger = new MyLogger();
+$logger = new \Monolog\Logger("index");
 
 class AllMigrations extends \Db\Migration {
   function getParents() {
@@ -84,6 +75,7 @@ if ($user) {
 <h2>Emails</h2>
 
 <a href="email.php">Send test email</a>
+<a href="email-fail.php">Send test failing email</a>
 
 <h2>Exceptions</h2>
 
