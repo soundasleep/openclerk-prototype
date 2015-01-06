@@ -2,7 +2,7 @@
 
 require(__DIR__ . "/../inc/global.php");
 
-$result = send_email("thisemailaddressshouldnotexist123123123123123123123@gmaiil.com", "test", array(
+$result = send_email("thisemailaddressshouldnotexist12312312312312312312311@yahoo.com", "test", array(
   "random" => rand(0,0x9999),
   "now" => date('r'),
   "site_url" => "http://localhost/",
