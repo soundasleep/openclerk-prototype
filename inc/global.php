@@ -72,7 +72,6 @@ Openclerk\Events::on('email_sent', function($email) {
     to_email=:to_email,
     subject=:subject,
     template_id=:template_id,
-    message_id=:message_id,
     arguments=:arguments");
   $q->execute(array(
     "user_id" => $email['user_id'],
@@ -80,7 +79,6 @@ Openclerk\Events::on('email_sent', function($email) {
     "to_email" => $email['to_email'],
     "subject" => $email['subject'],
     "template_id" => $email['template_id'],
-    "message_id" => $email['arguments']['message_id'],
     "arguments" => serialize($email['arguments']),
   ));
 });
