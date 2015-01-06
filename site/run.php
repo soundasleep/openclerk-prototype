@@ -2,16 +2,8 @@
 
 require(__DIR__ . "/../inc/global.php");
 
-class MyLogger extends Db\Logger {
-  function log($s) {
-    echo "<li>" . htmlspecialchars($s) . "</li>\n";
-  }
-  function error($e) {
-    echo "<li class=\"error\">" . htmlspecialchars($e) . "</li>\n";
-  }
-}
-
-$logger = new MyLogger();
+$logger = new \Monolog\Logger('Run');
+$logger->pushHandler(new OutputHandler());
 
 class DiscoveredComponentsJobTypeMapper implements \Jobs\JobTypeMapper {
 

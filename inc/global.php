@@ -80,7 +80,7 @@ Openclerk\Events::on('email_sent', function($email) {
     "to_email" => $email['to_email'],
     "subject" => $email['subject'],
     "template_id" => $email['template_id'],
-    "message_id" => $email['message_id'],
+    "message_id" => $email['arguments']['message_id'],
     "arguments" => serialize($email['arguments']),
   ));
 });
@@ -180,3 +180,12 @@ require(__DIR__ . "/heavy.php");
 });
 
 \Openclerk\I18n::addAvailableLocales(DiscoveredComponents\Locales::getAllInstances());
+
+class OutputHandler extends \Monolog\Handler\AbstractHandler {
+  public function handle(array $record) {
+    echo sprintf("<li><small>[%s] <b>%s</b></small> %s</li>\n",
+      $record['datetime']->format("H:i:s"),
+      $record['level_name'],
+      $record['message']);
+  }
+}

@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use \Monolog\Logger;
+
 class Bitcoin implements Currency, ExplorableCurrency, BalanceableAddress {
   function getName() {
     return "Bitcoin";
@@ -19,12 +21,12 @@ class Bitcoin implements Currency, ExplorableCurrency, BalanceableAddress {
     return "blockchain.info";
   }
 
-  function fetchBalance($address, \Db\Logger $logger) {
+  function fetchBalance($address, Logger $logger) {
     $url = "https://blockchain.info/q/addressbalance/" . urlencode($address) . "?confirmations=" . \Openclerk\Config::get('btc_confirmations', 0);
 
     // TODO blockchain API key
 
-    $logger->log("Fetching $url");
+    $logger->info("Fetching $url");
     $response = \Core\Fetch::get($url);
 
     // TODO is_numeric check

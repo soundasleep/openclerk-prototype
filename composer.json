@@ -24,7 +24,8 @@
     "openclerk/forms": "dev-master",
     "openclerk/i18n": "dev-master",
     "openclerk/apis": "dev-master",
-    "openclerk/metrics": "dev-master"
+    "openclerk/metrics": "dev-master",
+    "openclerk/email-lifecycle": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -44,6 +45,9 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/i18n"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/email-lifecycle"
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"

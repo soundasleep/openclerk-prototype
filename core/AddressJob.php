@@ -2,9 +2,11 @@
 
 namespace Core;
 
+use \Monolog\Logger;
+
 class AddressJob extends \Jobs\JobInstance {
 
-  function run(\Db\Connection $db, \Db\Logger $logger) {
+  function run(\Db\Connection $db, Logger $logger) {
 
     $argument = $this->getArgument();
 
@@ -15,22 +17,22 @@ class AddressJob extends \Jobs\JobInstance {
     if (!$address) {
       throw new \InvalidArgumentException("No address '$argument' found");
     }
-    $logger->log("Address is " . $address['address']);
+    $logger->info("Address is " . $address['address']);
 
     $currency = \DiscoveredComponents\Currencies::getInstance($address['currency']);
-    $logger->log("Currency is " . get_class($currency));
+    $logger->info("Currency is " . get_class($currency));
 
     if (!($currency instanceof BalanceableAddress)) {
       throw new \Jobs\JobException("Currency '" . $address['currency'] . "' is not balanceable");
     }
 
     $balance = $currency->fetchBalance($address['address'], $logger);
-    $logger->log("Address balance is $balance");
+    $logger->info("Address balance is $balance");
 
     // TODO move this into a helper method or object maybe
     $last_id = $this->insert_new_address_balance($db, $address['user_id'], $address, $balance);
 
-    $logger->log("Inserted new address_balances id=" . $last_id);
+    $logger->info("Inserted new address_balances id=" . $last_id);
 
   }
 

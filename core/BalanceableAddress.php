@@ -2,8 +2,10 @@
 
 namespace Core;
 
+use \Monolog\Logger;
+
 interface BalanceableAddress {
 
-  public function fetchBalance($address, \Db\Logger $logger);
+  public function fetchBalance($address, Logger $logger);
 
 }
