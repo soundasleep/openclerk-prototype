@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "60ab605c560f84c16b83a48f5de4a48e",
+    "hash": "e830687d75fef4175752b2ff58929629",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -100,16 +100,16 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "0.7.0",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "1d790ed19d49e5da8b0c431eb84797f3eec5fd36"
+                "reference": "0a8e12a4f86302227991895a4166dfe22c28de03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/1d790ed19d49e5da8b0c431eb84797f3eec5fd36",
-                "reference": "1d790ed19d49e5da8b0c431eb84797f3eec5fd36",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/0a8e12a4f86302227991895a4166dfe22c28de03",
+                "reference": "0a8e12a4f86302227991895a4166dfe22c28de03",
                 "shasum": ""
             },
             "require": {
@@ -155,7 +155,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2014-12-29 11:01:20"
+            "time": "2015-01-06 15:58:40"
         },
         {
             "name": "monolog/monolog",
@@ -291,12 +291,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "1648e77e3302e4a531d987908a4d7a042affdf87"
+                "reference": "2bf1c4e63353bf7fe6f4bdf82e7c581a447d5269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/1648e77e3302e4a531d987908a4d7a042affdf87",
-                "reference": "1648e77e3302e4a531d987908a4d7a042affdf87",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/2bf1c4e63353bf7fe6f4bdf82e7c581a447d5269",
+                "reference": "2bf1c4e63353bf7fe6f4bdf82e7c581a447d5269",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Simple PHP database management",
-            "time": "2014-12-29 22:23:13"
+            "time": "2015-01-06 00:29:21"
         },
         {
             "name": "openclerk/email-lifecycle",
@@ -323,12 +323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/email-lifecycle.git",
-                "reference": "6140a8b00ba3e38d03d44999ff397b293fd07efa"
+                "reference": "4d95725c4f9b260dd3e6a9078b19f8e2513fc9f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/email-lifecycle/zipball/6140a8b00ba3e38d03d44999ff397b293fd07efa",
-                "reference": "6140a8b00ba3e38d03d44999ff397b293fd07efa",
+                "url": "https://api.github.com/repos/openclerk/email-lifecycle/zipball/4d95725c4f9b260dd3e6a9078b19f8e2513fc9f6",
+                "reference": "4d95725c4f9b260dd3e6a9078b19f8e2513fc9f6",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,8 @@
                 "openclerk/db": "dev-master",
                 "openclerk/emails": "dev-master",
                 "openclerk/events": "dev-master",
-                "openclerk/templates": "dev-master"
+                "openclerk/templates": "dev-master",
+                "tedivm/fetch": "dev-master"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.4",
@@ -344,9 +345,6 @@
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "functions.php"
-                ],
                 "psr-4": {
                     "Emails\\Lifecycle\\": "src"
                 }
@@ -356,7 +354,7 @@
                 "source": "https://github.com/openclerk/email-lifecycle/tree/master",
                 "issues": "https://github.com/openclerk/email-lifecycle/issues"
             },
-            "time": "2015-01-06 00:07:26"
+            "time": "2015-01-06 23:20:21"
         },
         {
             "name": "openclerk/emails",
@@ -524,16 +522,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/jobs.git",
-                "reference": "88ddc85fd5a82aa6d1556dde8a24efb5dc7811c8"
+                "reference": "2524104ba46f3f3c11a6e93f49bcb49f1169ba10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/jobs/zipball/88ddc85fd5a82aa6d1556dde8a24efb5dc7811c8",
-                "reference": "88ddc85fd5a82aa6d1556dde8a24efb5dc7811c8",
+                "url": "https://api.github.com/repos/openclerk/jobs/zipball/2524104ba46f3f3c11a6e93f49bcb49f1169ba10",
+                "reference": "2524104ba46f3f3c11a6e93f49bcb49f1169ba10",
                 "shasum": ""
             },
             "require": {
-                "openclerk/db": "dev-master"
+                "monolog/monolog": "~1.12",
+                "openclerk/db": "dev-master",
+                "openclerk/events": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -545,7 +545,7 @@
                 "source": "https://github.com/openclerk/jobs/tree/master",
                 "issues": "https://github.com/openclerk/jobs/issues"
             },
-            "time": "2014-12-19 06:39:23"
+            "time": "2015-01-06 00:26:47"
         },
         {
             "name": "openclerk/metrics",
@@ -553,12 +553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/metrics.git",
-                "reference": "560cfd62bb57b846f61d59dbe5067f2a8c6837f6"
+                "reference": "25033f19ac58abd074d809be9c4763880b0ae13a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/metrics/zipball/560cfd62bb57b846f61d59dbe5067f2a8c6837f6",
-                "reference": "560cfd62bb57b846f61d59dbe5067f2a8c6837f6",
+                "url": "https://api.github.com/repos/openclerk/metrics/zipball/25033f19ac58abd074d809be9c4763880b0ae13a",
+                "reference": "25033f19ac58abd074d809be9c4763880b0ae13a",
                 "shasum": ""
             },
             "require": {
@@ -573,7 +573,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-12-27 05:25:31"
+            "time": "2015-01-06 00:28:36"
         },
         {
             "name": "openclerk/pages",
@@ -1078,6 +1078,55 @@
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
             "time": "2014-12-02 20:19:20"
+        },
+        {
+            "name": "tedivm/fetch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/Fetch.git",
+                "reference": "08ff0caa1c678d8526d5c93cd2d2264a6695726d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/Fetch/zipball/08ff0caa1c678d8526d5c93cd2d2264a6695726d",
+                "reference": "08ff0caa1c678d8526d5c93cd2d2264a6695726d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imap": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "0.5.*",
+                "phpunit/phpunit": "4.2.*",
+                "satooshi/php-coveralls": "dev-master",
+                "tedivm/dovecottesting": "1.2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Fetch": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "A PHP IMAP Library",
+            "homepage": "http://github.com/tedious/Fetch",
+            "keywords": [
+                "email",
+                "imap",
+                "pop3"
+            ],
+            "time": "2014-12-19 17:00:06"
         }
     ],
     "packages-dev": [
@@ -1826,6 +1875,7 @@
         "openclerk/apis": 20,
         "openclerk/metrics": 20,
         "openclerk/email-lifecycle": 20,
+        "tedivm/fetch": 20,
         "soundasleep/component-tests": 20
     },
     "prefer-stable": false,

@@ -25,7 +25,8 @@
     "openclerk/i18n": "dev-master",
     "openclerk/apis": "dev-master",
     "openclerk/metrics": "dev-master",
-    "openclerk/email-lifecycle": "dev-master"
+    "openclerk/email-lifecycle": "dev-master",
+    "tedivm/fetch": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
