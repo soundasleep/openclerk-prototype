@@ -189,6 +189,20 @@ if ($user) {
 <li><?php echo link_to(url_for('slow-curl'), "Slow CURL"); ?></li>
 </ul>
 
+<h2>Cache</h2>
+
+<ul>
+<li>Cache last updated <?php
+
+function get_last_updated_cache() {
+  return date('r');
+}
+
+echo \Openclerk\Cache::get(db(), "last_cache", "ignored", 30, 'get_last_updated_cache', array());
+
+?></li>
+</ul>
+
 <?php
 
 page_footer();

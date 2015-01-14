@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "60ab605c560f84c16b83a48f5de4a48e",
+    "hash": "d589fa34b05ac62431acf7da3e05dff2",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -260,6 +260,39 @@
             "time": "2015-01-09 03:22:55"
         },
         {
+            "name": "openclerk/cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/cache.git",
+                "reference": "8beab9cc6984ccd228b48b16f2e6f8a389720cdd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/cache/zipball/8beab9cc6984ccd228b48b16f2e6f8a389720cdd",
+                "reference": "8beab9cc6984ccd228b48b16f2e6f8a389720cdd",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/db": "dev-master"
+            },
+            "require-dev": {
+                "soundasleep/component-tests": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Openclerk\\": "src"
+                }
+            },
+            "description": "A library for defining cacheable resources",
+            "support": {
+                "source": "https://github.com/openclerk/cache/tree/master",
+                "issues": "https://github.com/openclerk/cache/issues"
+            },
+            "time": "2015-01-14 03:30:33"
+        },
+        {
             "name": "openclerk/config",
             "version": "dev-master",
             "source": {
@@ -291,12 +324,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "76c8f83a8856fd9760337145c0411a7e7266e197"
+                "reference": "f31848fd6ed80722325bda82e1ac0a0349cb878e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/76c8f83a8856fd9760337145c0411a7e7266e197",
-                "reference": "76c8f83a8856fd9760337145c0411a7e7266e197",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/f31848fd6ed80722325bda82e1ac0a0349cb878e",
+                "reference": "f31848fd6ed80722325bda82e1ac0a0349cb878e",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +348,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Simple PHP database management",
-            "time": "2015-01-09 04:02:44"
+            "time": "2015-01-14 03:24:04"
         },
         {
             "name": "openclerk/email-lifecycle",
@@ -1875,6 +1908,7 @@
         "openclerk/apis": 20,
         "openclerk/metrics": 20,
         "openclerk/email-lifecycle": 20,
+        "openclerk/cache": 20,
         "soundasleep/component-tests": 20
     },
     "prefer-stable": false,
