@@ -26,7 +26,8 @@
     "openclerk/apis": "dev-master",
     "openclerk/metrics": "dev-master",
     "openclerk/email-lifecycle": "dev-master",
-    "openclerk/cache": "dev-master"
+    "openclerk/cache": "dev-master",
+    "openclerk/api-list": "dev-master"
   },
   "repositories": [{
     "type": "vcs",
@@ -52,6 +53,9 @@
   }, {
     "type": "vcs",
     "url": "https://github.com/openclerk/cache"
+  }, {
+    "type": "vcs",
+    "url": "https://github.com/openclerk/api-list"
   }, {
     "type": "vcs",
     "url": "https://github.com/soundasleep/php-helpers"

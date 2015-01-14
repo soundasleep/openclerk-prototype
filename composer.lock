@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d589fa34b05ac62431acf7da3e05dff2",
+    "hash": "52f382164d1bb427d2089486dc35e953",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -230,17 +230,53 @@
             "time": "2014-12-29 21:29:35"
         },
         {
+            "name": "openclerk/api-list",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/api-list.git",
+                "reference": "daeb345619aef901ef9f0cbd6ac6eab19e776cea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/api-list/zipball/daeb345619aef901ef9f0cbd6ac6eab19e776cea",
+                "reference": "daeb345619aef901ef9f0cbd6ac6eab19e776cea",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/apis": "dev-master"
+            },
+            "require-dev": {
+                "soundasleep/component-tests": "dev-master"
+            },
+            "suggest": {
+                "openclerk/cache": "For cacheable APIs"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Apis\\ApiList\\": "src"
+                }
+            },
+            "description": "A library for listing and discovering runtime properties of APIs",
+            "support": {
+                "source": "https://github.com/openclerk/api-list/tree/master",
+                "issues": "https://github.com/openclerk/api-list/issues"
+            },
+            "time": "2015-01-14 04:03:55"
+        },
+        {
             "name": "openclerk/apis",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/apis.git",
-                "reference": "98d32b3d746effcd569deaa37683c2aa41cd4905"
+                "reference": "4f8573f9a75db509956bc31017acb877fefa02a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/apis/zipball/98d32b3d746effcd569deaa37683c2aa41cd4905",
-                "reference": "98d32b3d746effcd569deaa37683c2aa41cd4905",
+                "url": "https://api.github.com/repos/openclerk/apis/zipball/4f8573f9a75db509956bc31017acb877fefa02a4",
+                "reference": "4f8573f9a75db509956bc31017acb877fefa02a4",
                 "shasum": ""
             },
             "require": {
@@ -248,6 +284,9 @@
             },
             "require-dev": {
                 "soundasleep/component-tests": "dev-master"
+            },
+            "suggest": {
+                "openclerk/cache": "For cacheable APIs"
             },
             "type": "library",
             "autoload": {
@@ -257,7 +296,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "A library for defining and using APIs",
-            "time": "2015-01-09 03:22:55"
+            "time": "2015-01-14 03:52:41"
         },
         {
             "name": "openclerk/cache",
@@ -265,12 +304,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/cache.git",
-                "reference": "8beab9cc6984ccd228b48b16f2e6f8a389720cdd"
+                "reference": "c026b78716a1162baa97fea0662ba1ee451334ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/cache/zipball/8beab9cc6984ccd228b48b16f2e6f8a389720cdd",
-                "reference": "8beab9cc6984ccd228b48b16f2e6f8a389720cdd",
+                "url": "https://api.github.com/repos/openclerk/cache/zipball/c026b78716a1162baa97fea0662ba1ee451334ae",
+                "reference": "c026b78716a1162baa97fea0662ba1ee451334ae",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +329,7 @@
                 "source": "https://github.com/openclerk/cache/tree/master",
                 "issues": "https://github.com/openclerk/cache/issues"
             },
-            "time": "2015-01-14 03:30:33"
+            "time": "2015-01-14 03:36:34"
         },
         {
             "name": "openclerk/config",
@@ -324,12 +363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "f31848fd6ed80722325bda82e1ac0a0349cb878e"
+                "reference": "d1b6edb7315879bdfcccea2f4ae8ed7e9c9fde56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/f31848fd6ed80722325bda82e1ac0a0349cb878e",
-                "reference": "f31848fd6ed80722325bda82e1ac0a0349cb878e",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/d1b6edb7315879bdfcccea2f4ae8ed7e9c9fde56",
+                "reference": "d1b6edb7315879bdfcccea2f4ae8ed7e9c9fde56",
                 "shasum": ""
             },
             "require": {
@@ -348,7 +387,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Simple PHP database management",
-            "time": "2015-01-14 03:24:04"
+            "time": "2015-01-14 03:33:57"
         },
         {
             "name": "openclerk/email-lifecycle",
@@ -1909,6 +1948,7 @@
         "openclerk/metrics": 20,
         "openclerk/email-lifecycle": 20,
         "openclerk/cache": 20,
+        "openclerk/api-list": 20,
         "soundasleep/component-tests": 20
     },
     "prefer-stable": false,

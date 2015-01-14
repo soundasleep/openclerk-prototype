@@ -181,6 +181,7 @@ if ($user) {
 <li><?php echo link_to(url_for('api/v1/currency/btc'), "api/v1/currency/btc"); ?></li>
 <li><?php echo link_to(url_for('api/v1/currency/invalid'), "api/v1/currency/invalid"); ?></li>
 <li><?php echo plural("API", count(DiscoveredComponents\Apis::getKeys())); ?></li>
+<li><?php echo link_to("apis.php", "list of apis"); ?></li>
 </ul>
 
 <h2>Metrics</h2>
