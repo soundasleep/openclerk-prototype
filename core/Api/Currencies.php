@@ -5,7 +5,7 @@ namespace Core\Api;
 /**
  * API to get a list of currencies and their properties.
  */
-class Currencies extends \Apis\Api {
+class Currencies extends \Apis\CachedApi {
 
   function getJSON($arguments) {
     $currencies = \DiscoveredComponents\Currencies::getAllInstances();
@@ -22,6 +22,10 @@ class Currencies extends \Apis\Api {
 
   function getEndpoint() {
     return "/api/v1/currencies";
+  }
+
+  function getHash($arguments) {
+    return "";    // there is nothing to hash
   }
 
 }
