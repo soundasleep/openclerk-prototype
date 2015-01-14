@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e830687d75fef4175752b2ff58929629",
+    "hash": "60ab605c560f84c16b83a48f5de4a48e",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -235,12 +235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/apis.git",
-                "reference": "fe3d437f56516bf4d0d4c0f286e35d78dbb04e35"
+                "reference": "98d32b3d746effcd569deaa37683c2aa41cd4905"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/apis/zipball/fe3d437f56516bf4d0d4c0f286e35d78dbb04e35",
-                "reference": "fe3d437f56516bf4d0d4c0f286e35d78dbb04e35",
+                "url": "https://api.github.com/repos/openclerk/apis/zipball/98d32b3d746effcd569deaa37683c2aa41cd4905",
+                "reference": "98d32b3d746effcd569deaa37683c2aa41cd4905",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "A library for defining and using APIs",
-            "time": "2015-01-04 00:37:08"
+            "time": "2015-01-09 03:22:55"
         },
         {
             "name": "openclerk/config",
@@ -291,12 +291,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/db.git",
-                "reference": "2bf1c4e63353bf7fe6f4bdf82e7c581a447d5269"
+                "reference": "76c8f83a8856fd9760337145c0411a7e7266e197"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/db/zipball/2bf1c4e63353bf7fe6f4bdf82e7c581a447d5269",
-                "reference": "2bf1c4e63353bf7fe6f4bdf82e7c581a447d5269",
+                "url": "https://api.github.com/repos/openclerk/db/zipball/76c8f83a8856fd9760337145c0411a7e7266e197",
+                "reference": "76c8f83a8856fd9760337145c0411a7e7266e197",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Simple PHP database management",
-            "time": "2015-01-06 00:29:21"
+            "time": "2015-01-09 04:02:44"
         },
         {
             "name": "openclerk/email-lifecycle",
@@ -323,12 +323,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/email-lifecycle.git",
-                "reference": "4d95725c4f9b260dd3e6a9078b19f8e2513fc9f6"
+                "reference": "4fa3e2e0e19dc1b218b87f500a32a948b26ef4c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/email-lifecycle/zipball/4d95725c4f9b260dd3e6a9078b19f8e2513fc9f6",
-                "reference": "4d95725c4f9b260dd3e6a9078b19f8e2513fc9f6",
+                "url": "https://api.github.com/repos/openclerk/email-lifecycle/zipball/4fa3e2e0e19dc1b218b87f500a32a948b26ef4c1",
+                "reference": "4fa3e2e0e19dc1b218b87f500a32a948b26ef4c1",
                 "shasum": ""
             },
             "require": {
@@ -337,7 +337,7 @@
                 "openclerk/emails": "dev-master",
                 "openclerk/events": "dev-master",
                 "openclerk/templates": "dev-master",
-                "tedivm/fetch": "dev-master"
+                "tedivm/fetch": "~0.6"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.4",
@@ -354,7 +354,7 @@
                 "source": "https://github.com/openclerk/email-lifecycle/tree/master",
                 "issues": "https://github.com/openclerk/email-lifecycle/issues"
             },
-            "time": "2015-01-06 23:20:21"
+            "time": "2015-01-14 02:08:25"
         },
         {
             "name": "openclerk/emails",
@@ -1023,17 +1023,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.6.1",
+            "version": "v2.6.3",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "720fe9bca893df7ad1b4546649473b5afddf0216"
+                "reference": "40ff70cadea3785d83cac1c8309514b36113064e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/720fe9bca893df7ad1b4546649473b5afddf0216",
-                "reference": "720fe9bca893df7ad1b4546649473b5afddf0216",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/40ff70cadea3785d83cac1c8309514b36113064e",
+                "reference": "40ff70cadea3785d83cac1c8309514b36113064e",
                 "shasum": ""
             },
             "require": {
@@ -1041,10 +1041,10 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0",
+                "symfony/config": "~2.0,>=2.0.5",
                 "symfony/dependency-injection": "~2.6",
                 "symfony/expression-language": "~2.6",
-                "symfony/stopwatch": "~2.2"
+                "symfony/stopwatch": "~2.3"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -1077,20 +1077,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-02 20:19:20"
+            "time": "2015-01-05 14:28:40"
         },
         {
             "name": "tedivm/fetch",
-            "version": "dev-master",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tedious/Fetch.git",
-                "reference": "08ff0caa1c678d8526d5c93cd2d2264a6695726d"
+                "reference": "154a84fdfa0d045c2871dd9f8708362fb9ea4acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tedious/Fetch/zipball/08ff0caa1c678d8526d5c93cd2d2264a6695726d",
-                "reference": "08ff0caa1c678d8526d5c93cd2d2264a6695726d",
+                "url": "https://api.github.com/repos/tedious/Fetch/zipball/154a84fdfa0d045c2871dd9f8708362fb9ea4acf",
+                "reference": "154a84fdfa0d045c2871dd9f8708362fb9ea4acf",
                 "shasum": ""
             },
             "require": {
@@ -1126,7 +1126,7 @@
                 "imap",
                 "pop3"
             ],
-            "time": "2014-12-19 17:00:06"
+            "time": "2015-01-08 03:22:20"
         }
     ],
     "packages-dev": [
@@ -1807,17 +1807,17 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.6.1",
+            "version": "v2.6.3",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "3346fc090a3eb6b53d408db2903b241af51dcb20"
+                "reference": "82462a90848a52c2533aa6b598b107d68076b018"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/3346fc090a3eb6b53d408db2903b241af51dcb20",
-                "reference": "3346fc090a3eb6b53d408db2903b241af51dcb20",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/82462a90848a52c2533aa6b598b107d68076b018",
+                "reference": "82462a90848a52c2533aa6b598b107d68076b018",
                 "shasum": ""
             },
             "require": {
@@ -1850,7 +1850,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-12-02 20:19:20"
+            "time": "2015-01-03 15:33:07"
         }
     ],
     "aliases": [],
@@ -1875,7 +1875,6 @@
         "openclerk/apis": 20,
         "openclerk/metrics": 20,
         "openclerk/email-lifecycle": 20,
-        "tedivm/fetch": 20,
         "soundasleep/component-tests": 20
     },
     "prefer-stable": false,
