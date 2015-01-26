@@ -205,6 +205,14 @@ echo \Openclerk\Cache::get(db(), "last_cache", "ignored", 30, 'get_last_updated_
 ?></li>
 </ul>
 
+<h2>Pages</h2>
+
+<ul>
+<?php foreach (\DiscoveredComponents\Pages::getAllInstances() as $instance) {
+  echo "<li>" . link_to(url_for($instance->getPath()), get_class($instance)) . "</li>";
+} ?>
+</ul>
+
 <?php
 
 page_footer();

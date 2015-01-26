@@ -4,7 +4,14 @@
     "jobs": "jobs.json",
     "migrations": "migrations.json",
     "locales": "locales.json",
-    "apis": "apis.json"
+    "apis": "apis.json",
+    "pages": {
+      "file": "pages.json",
+      "instanceof": "\\Openclerk\\RoutedPage",
+      "lists": {
+        "getPaths": "getPath"
+      }
+    }
   },
   "src": ["vendor/*/*", "core"],
   "dest": "generated/components"

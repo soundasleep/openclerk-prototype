@@ -28,6 +28,8 @@
     "openclerk/email-lifecycle": "dev-master",
     "openclerk/cache": "dev-master",
     "openclerk/api-list": "dev-master",
+    "openclerk/permissions": "dev-master",
+    "openclerk/exceptions-ui": "dev-master",
     "mthaml/mthaml": "dev-master"
   },
   "repositories": [{

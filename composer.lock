@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "b398cbd18267bd2027397ae23b81daa6",
+    "hash": "36e430d279fef6edae673bd0d5e3b77d",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -565,12 +566,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/exceptions.git",
-                "reference": "938ccfbf645d1396680afeff7af6d348aec6c018"
+                "reference": "df1376e790a79ad728cbec41e0eaba4102ddea5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/exceptions/zipball/938ccfbf645d1396680afeff7af6d348aec6c018",
-                "reference": "938ccfbf645d1396680afeff7af6d348aec6c018",
+                "url": "https://api.github.com/repos/openclerk/exceptions/zipball/df1376e790a79ad728cbec41e0eaba4102ddea5d",
+                "reference": "df1376e790a79ad728cbec41e0eaba4102ddea5d",
                 "shasum": ""
             },
             "require": {
@@ -578,20 +579,60 @@
                 "openclerk/db": "dev-master",
                 "openclerk/events": "dev-master"
             },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "soundasleep/component-tests": "dev-master"
+            },
             "type": "library",
             "autoload": {
                 "files": [
                     "functions.php"
                 ],
                 "psr-4": {
-                    "Openclerk\\": "src"
+                    "Openclerk\\Exceptions\\": "src"
                 }
             },
-            "support": {
-                "source": "https://github.com/openclerk/exceptions/tree/master",
-                "issues": "https://github.com/openclerk/exceptions/issues"
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A library for logging and managing uncaught exceptions",
+            "time": "2015-01-26 22:11:42"
+        },
+        {
+            "name": "openclerk/exceptions-ui",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/exceptions-ui.git",
+                "reference": "6a040e1082bb83a8597df63359be945fd8f6f4a5"
             },
-            "time": "2014-12-15 03:13:16"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/exceptions-ui/zipball/6a040e1082bb83a8597df63359be945fd8f6f4a5",
+                "reference": "6a040e1082bb83a8597df63359be945fd8f6f4a5",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/config": "dev-master",
+                "openclerk/db": "dev-master",
+                "openclerk/events": "dev-master",
+                "openclerk/exceptions": "dev-master",
+                "openclerk/i18n": "dev-master",
+                "openclerk/pages": "dev-master",
+                "openclerk/permissions": "dev-master",
+                "openclerk/routing": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "soundasleep/component-tests": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Openclerk\\Exceptions\\Pages\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A user interface for managing uncaught exceptions",
+            "time": "2015-01-26 22:29:25"
         },
         {
             "name": "openclerk/forms",
@@ -599,12 +640,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/forms.git",
-                "reference": "9ab095bf8c22106974684e2a06d44973b420f1c5"
+                "reference": "2e3625735d1808fc974fa3d873d026c98925f834"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/forms/zipball/9ab095bf8c22106974684e2a06d44973b420f1c5",
-                "reference": "9ab095bf8c22106974684e2a06d44973b420f1c5",
+                "url": "https://api.github.com/repos/openclerk/forms/zipball/2e3625735d1808fc974fa3d873d026c98925f834",
+                "reference": "2e3625735d1808fc974fa3d873d026c98925f834",
                 "shasum": ""
             },
             "require": {
@@ -620,7 +661,7 @@
                 "source": "https://github.com/openclerk/forms/tree/master",
                 "issues": "https://github.com/openclerk/forms/issues"
             },
-            "time": "2014-12-15 23:58:17"
+            "time": "2015-01-26 22:23:19"
         },
         {
             "name": "openclerk/i18n",
@@ -743,17 +784,48 @@
             "time": "2015-01-19 02:55:14"
         },
         {
+            "name": "openclerk/permissions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openclerk/permissions.git",
+                "reference": "df905e4bda4a25e7e861a749bc0687179aee1643"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openclerk/permissions/zipball/df905e4bda4a25e7e861a749bc0687179aee1643",
+                "reference": "df905e4bda4a25e7e861a749bc0687179aee1643",
+                "shasum": ""
+            },
+            "require": {
+                "openclerk/events": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "soundasleep/component-tests": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Openclerk\\Permissions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A library for managing access permissions",
+            "time": "2015-01-26 22:13:52"
+        },
+        {
             "name": "openclerk/routing",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/routing.git",
-                "reference": "3777f3fef6cede4ff787851abd01f2a04acdbfc2"
+                "reference": "31e19ffe8e91e00c240ecc978a63f763d0f76c86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/routing/zipball/3777f3fef6cede4ff787851abd01f2a04acdbfc2",
-                "reference": "3777f3fef6cede4ff787851abd01f2a04acdbfc2",
+                "url": "https://api.github.com/repos/openclerk/routing/zipball/31e19ffe8e91e00c240ecc978a63f763d0f76c86",
+                "reference": "31e19ffe8e91e00c240ecc978a63f763d0f76c86",
                 "shasum": ""
             },
             "require": {
@@ -775,7 +847,7 @@
                 "source": "https://github.com/openclerk/routing/tree/master",
                 "issues": "https://github.com/openclerk/routing/issues"
             },
-            "time": "2014-12-27 07:04:20"
+            "time": "2015-01-26 21:27:21"
         },
         {
             "name": "openclerk/templates",
@@ -1012,12 +1084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/soundasleep/component-discovery.git",
-                "reference": "4e127bac9dd301c6877c46f31780bd7297b50c8e"
+                "reference": "e36c1073fb58c9422c96df6e2039aa61c8f6800d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soundasleep/component-discovery/zipball/4e127bac9dd301c6877c46f31780bd7297b50c8e",
-                "reference": "4e127bac9dd301c6877c46f31780bd7297b50c8e",
+                "url": "https://api.github.com/repos/soundasleep/component-discovery/zipball/e36c1073fb58c9422c96df6e2039aa61c8f6800d",
+                "reference": "e36c1073fb58c9422c96df6e2039aa61c8f6800d",
                 "shasum": ""
             },
             "require-dev": {
@@ -1032,7 +1104,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "PHP Component Discovery for Composer",
-            "time": "2015-01-04 00:52:34"
+            "time": "2015-01-26 03:35:55"
         },
         {
             "name": "soundasleep/html2text",
@@ -1991,9 +2063,7 @@
             "time": "2015-01-03 15:33:07"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "soundasleep/component-discovery": 20,
@@ -2017,13 +2087,13 @@
         "openclerk/email-lifecycle": 20,
         "openclerk/cache": 20,
         "openclerk/api-list": 20,
+        "openclerk/permissions": 20,
+        "openclerk/exceptions-ui": 20,
         "mthaml/mthaml": 20,
         "soundasleep/component-tests": 20
     },
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
 }

@@ -100,7 +100,6 @@ function link_to($url, $text = false) {
 
 // set up routes
 \Openclerk\Router::addRoutes(array(
-  "security/login/password" => "security/login.php",
   "security/login/:key" => "security/login-:key.php",
   "security/register/password" => "security/register.php",
   "security/register/:key" => "security/register-:key.php",
@@ -108,6 +107,13 @@ function link_to($url, $text = false) {
   "security/signup/password" => "security/signup.php",
   // could also do api/v1/core/:key
 ));
+
+// load up Page components
+foreach (DiscoveredComponents\Pages::getAllInstances() as $handler) {
+  \Openclerk\Router::addRoutes(array(
+    $handler->getPath() => $handler,
+  ));
+}
 
 // load up API routes
 foreach (DiscoveredComponents\Apis::getAllInstances() as $uri => $handler) {
@@ -187,3 +193,18 @@ class OutputHandler extends \Monolog\Handler\AbstractHandler {
       $record['message']);
   }
 }
+
+use \Openclerk\Permissions\Permissions;
+use \Openclerk\Permissions\PermissionHandler;
+
+class MyPermissionHandler implements PermissionHandler {
+  function getPermissions() {
+    $user = Users\User::getInstance(db());
+    if ($user) {
+      return array("exceptions");
+    }
+    return array();
+  }
+}
+
+Permissions::registerHandler(new MyPermissionHandler());
