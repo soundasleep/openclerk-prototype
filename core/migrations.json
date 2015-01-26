@@ -1,7 +1,7 @@
-{
-  "\\Core\\EmailsMigration": "\\Core\\EmailsMigration",
-  "\\Core\\EmailsMessageIDMigration": "\\Core\\EmailsMessageIDMigration",
-  "\\Core\\Migrations\\Addresses": "\\Core\\Migrations\\Addresses",
-  "\\Core\\Migrations\\AddressBalances": "\\Core\\Migrations\\AddressBalances",
-  "\\Core\\Migrations\\HeavyRequests": "\\Core\\Migrations\\HeavyRequests"
-}
+[
+  "\\Core\\EmailsMigration",
+  "\\Core\\EmailsMessageIDMigration",
+  "\\Core\\Migrations\\Addresses",
+  "\\Core\\Migrations\\AddressBalances",
+  "\\Core\\Migrations\\HeavyRequests"
+]
