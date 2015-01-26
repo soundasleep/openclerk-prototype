@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
-        "This file is @generated automatically"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "52f382164d1bb427d2089486dc35e953",
+    "hash": "b398cbd18267bd2027397ae23b81daa6",
     "packages": [
         {
             "name": "guzzle/guzzle",
@@ -230,21 +229,93 @@
             "time": "2014-12-29 21:29:35"
         },
         {
+            "name": "mthaml/mthaml",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arnaud-lb/MtHaml.git",
+                "reference": "d14c9860240710763226c4b8c09f80c80c4911dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arnaud-lb/MtHaml/zipball/d14c9860240710763226c4b8c09f80c80c4911dd",
+                "reference": "d14c9860240710763226c4b8c09f80c80c4911dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "conflict": {
+                "mthaml/mthaml-bundle": "<1.1.0"
+            },
+            "require-dev": {
+                "cebe/markdown": "~1",
+                "coffeescript/coffeescript": "~1",
+                "erusev/parsedown": "*",
+                "fluxbb/commonmark": "~1@dev",
+                "gregwar/rst": "~1",
+                "kzykhys/ciconia": "~1",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "league/commonmark": ">=0.5",
+                "michelf/php-markdown": "~1.3",
+                "oyejorge/less.php": "*",
+                "twig/twig": "~1.11"
+            },
+            "suggest": {
+                "cebe/markdown": "If you want to use :markdown filter",
+                "coffeescript/coffeescript": "If you want to use :coffee or :coffeescript filter",
+                "erusev/parsedown": "If you want to use :markdown filter",
+                "fluxbb/commonmark": "If you want to use :markdown filter",
+                "gregwar/rst": "If you want to use :rest filter",
+                "kzykhys/ciconia": "If you want to use :markdown filter",
+                "leafo/lessphp": "If you want to use :less filter",
+                "leafo/scssphp": "If you want to use :scss filter",
+                "league/commonmark": "If you want to use :markdown filter",
+                "michelf/php-markdown": "If you want to use :markdown filter",
+                "oyejorge/less.php": "If you want to use :less filter",
+                "twig/twig": "If you want to use Twig templating engine"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MtHaml\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Le Blanc",
+                    "email": "arnaud.lb@gmail.com"
+                }
+            ],
+            "description": "HAML for PHP",
+            "homepage": "https://github.com/arnaud-lb/MtHaml",
+            "keywords": [
+                "HAML"
+            ],
+            "time": "2015-01-23 15:23:28"
+        },
+        {
             "name": "openclerk/api-list",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/api-list.git",
-                "reference": "daeb345619aef901ef9f0cbd6ac6eab19e776cea"
+                "reference": "b8c141271d0562b68579696766e9a2f99255da3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/api-list/zipball/daeb345619aef901ef9f0cbd6ac6eab19e776cea",
-                "reference": "daeb345619aef901ef9f0cbd6ac6eab19e776cea",
+                "url": "https://api.github.com/repos/openclerk/api-list/zipball/b8c141271d0562b68579696766e9a2f99255da3d",
+                "reference": "b8c141271d0562b68579696766e9a2f99255da3d",
                 "shasum": ""
             },
             "require": {
-                "openclerk/apis": "dev-master"
+                "openclerk/apis": "dev-master",
+                "openclerk/config": "dev-master"
             },
             "require-dev": {
                 "soundasleep/component-tests": "dev-master"
@@ -255,7 +326,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Apis\\ApiList\\": "src"
+                    "Apis\\ApiList\\": "src",
+                    "Apis\\ApiList\\Tests\\": "test"
                 }
             },
             "description": "A library for listing and discovering runtime properties of APIs",
@@ -263,7 +335,7 @@
                 "source": "https://github.com/openclerk/api-list/tree/master",
                 "issues": "https://github.com/openclerk/api-list/issues"
             },
-            "time": "2015-01-14 04:03:55"
+            "time": "2015-01-26 03:16:27"
         },
         {
             "name": "openclerk/apis",
@@ -271,12 +343,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/apis.git",
-                "reference": "4f8573f9a75db509956bc31017acb877fefa02a4"
+                "reference": "d7e1fa215a080bc83b01303b02a5048accb36a26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/apis/zipball/4f8573f9a75db509956bc31017acb877fefa02a4",
-                "reference": "4f8573f9a75db509956bc31017acb877fefa02a4",
+                "url": "https://api.github.com/repos/openclerk/apis/zipball/d7e1fa215a080bc83b01303b02a5048accb36a26",
+                "reference": "d7e1fa215a080bc83b01303b02a5048accb36a26",
                 "shasum": ""
             },
             "require": {
@@ -296,7 +368,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "A library for defining and using APIs",
-            "time": "2015-01-14 03:52:41"
+            "time": "2015-01-22 02:19:32"
         },
         {
             "name": "openclerk/cache",
@@ -337,12 +409,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/config.git",
-                "reference": "c86c7dc7567efbf406fd9ceb4252c80560e60bec"
+                "reference": "0c5c0335718c479050e9eba0df727447297927f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/config/zipball/c86c7dc7567efbf406fd9ceb4252c80560e60bec",
-                "reference": "c86c7dc7567efbf406fd9ceb4252c80560e60bec",
+                "url": "https://api.github.com/repos/openclerk/config/zipball/0c5c0335718c479050e9eba0df727447297927f1",
+                "reference": "0c5c0335718c479050e9eba0df727447297927f1",
                 "shasum": ""
             },
             "type": "library",
@@ -351,11 +423,8 @@
                     "Openclerk\\": "src"
                 }
             },
-            "support": {
-                "source": "https://github.com/openclerk/config/tree/master",
-                "issues": "https://github.com/openclerk/config/issues"
-            },
-            "time": "2014-12-08 02:13:51"
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2015-01-21 01:56:33"
         },
         {
             "name": "openclerk/db",
@@ -653,13 +722,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/openclerk/pages.git",
-                "reference": "296f39028f24b9925f25654ee1725fc80f982ef5"
+                "reference": "bdf41e0fe3a4dc4f1ea7a5efe9276782eada5c9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openclerk/pages/zipball/296f39028f24b9925f25654ee1725fc80f982ef5",
-                "reference": "296f39028f24b9925f25654ee1725fc80f982ef5",
+                "url": "https://api.github.com/repos/openclerk/pages/zipball/bdf41e0fe3a4dc4f1ea7a5efe9276782eada5c9b",
+                "reference": "bdf41e0fe3a4dc4f1ea7a5efe9276782eada5c9b",
                 "shasum": ""
+            },
+            "require": {
+                "mthaml/mthaml": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -667,11 +739,8 @@
                     "Pages\\": "src"
                 }
             },
-            "support": {
-                "source": "https://github.com/openclerk/pages/tree/master",
-                "issues": "https://github.com/openclerk/pages/issues"
-            },
-            "time": "2014-12-12 23:47:58"
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2015-01-19 02:55:14"
         },
         {
             "name": "openclerk/routing",
@@ -1270,16 +1339,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.0.14",
+            "version": "2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ca158276c1200cc27f5409a5e338486bc0b4fc94"
+                "reference": "34cc484af1ca149188d0d9e91412191e398e0b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ca158276c1200cc27f5409a5e338486bc0b4fc94",
-                "reference": "ca158276c1200cc27f5409a5e338486bc0b4fc94",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/34cc484af1ca149188d0d9e91412191e398e0b67",
+                "reference": "34cc484af1ca149188d0d9e91412191e398e0b67",
                 "shasum": ""
             },
             "require": {
@@ -1292,7 +1361,7 @@
             },
             "require-dev": {
                 "ext-xdebug": ">=2.1.4",
-                "phpunit/phpunit": "~4.1"
+                "phpunit/phpunit": "~4"
             },
             "suggest": {
                 "ext-dom": "*",
@@ -1311,9 +1380,6 @@
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                ""
-            ],
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1331,7 +1397,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-12-26 13:28:33"
+            "time": "2015-01-24 10:06:35"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1468,16 +1534,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "f8d5d08c56de5cfd592b3340424a81733259a876"
+                "reference": "db32c18eba00b121c145575fcbcd4d4d24e6db74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/f8d5d08c56de5cfd592b3340424a81733259a876",
-                "reference": "f8d5d08c56de5cfd592b3340424a81733259a876",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/db32c18eba00b121c145575fcbcd4d4d24e6db74",
+                "reference": "db32c18eba00b121c145575fcbcd4d4d24e6db74",
                 "shasum": ""
             },
             "require": {
@@ -1490,7 +1556,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -1513,7 +1579,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2014-08-31 06:12:13"
+            "time": "2015-01-17 09:51:32"
         },
         {
             "name": "phpunit/phpunit",
@@ -1925,7 +1991,9 @@
             "time": "2015-01-03 15:33:07"
         }
     ],
-    "aliases": [],
+    "aliases": [
+
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "soundasleep/component-discovery": 20,
@@ -1949,9 +2017,13 @@
         "openclerk/email-lifecycle": 20,
         "openclerk/cache": 20,
         "openclerk/api-list": 20,
+        "mthaml/mthaml": 20,
         "soundasleep/component-tests": 20
     },
-    "prefer-stable": false,
-    "platform": [],
-    "platform-dev": []
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
 }

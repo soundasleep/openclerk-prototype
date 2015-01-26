@@ -4,6 +4,8 @@ namespace Core\Api;
 
 /**
  * API to get a single currency properties.
+ *
+ * @param currency the currency to list properties for
  */
 class Currency extends \Apis\CachedApi {
 

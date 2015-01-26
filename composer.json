@@ -27,7 +27,8 @@
     "openclerk/metrics": "dev-master",
     "openclerk/email-lifecycle": "dev-master",
     "openclerk/cache": "dev-master",
-    "openclerk/api-list": "dev-master"
+    "openclerk/api-list": "dev-master",
+    "mthaml/mthaml": "dev-master"
   },
   "repositories": [{
     "type": "vcs",

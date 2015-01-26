@@ -180,6 +180,7 @@ if ($user) {
 <li><?php echo link_to(url_for('api/v1/currencies'), "api/v1/currencies"); ?></li>
 <li><?php echo link_to(url_for('api/v1/currency/btc'), "api/v1/currency/btc"); ?></li>
 <li><?php echo link_to(url_for('api/v1/currency/invalid'), "api/v1/currency/invalid"); ?></li>
+<li><?php echo link_to(url_for('api/v1/apis'), "api/v1/apis"); ?></li>
 <li><?php echo plural("API", count(DiscoveredComponents\Apis::getKeys())); ?></li>
 <li><?php echo link_to("apis.php", "list of apis"); ?></li>
 </ul>
