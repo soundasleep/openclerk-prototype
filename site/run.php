@@ -17,10 +17,15 @@ class DiscoveredComponentsJobTypeMapper implements \Jobs\JobTypeMapper {
 $mapper = new DiscoveredComponentsJobTypeMapper();
 $runner = new Jobs\JobsRunner($mapper);
 
-if (require_get("id", false)) {
-  $job = $runner->runJob(require_get("id"), db(), $logger);
-} else {
-  $job = $runner->runOne(db(), $logger);
+try {
+  if (require_get("id", false)) {
+    $job = $runner->runJob(require_get("id"), db(), $logger);
+  } else {
+    $job = $runner->runOne(db(), $logger);
+  }
+} catch (\Jobs\JobException $e) {
+  // we've already captured this with openclerk/exceptions
+  $logger->error($e);
 }
 
 ?>
